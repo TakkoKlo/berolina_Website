@@ -3,7 +3,7 @@
 
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-  <meta content="utf-8" http-equiv="encoding">
+    <meta content="utf-8" http-equiv="encoding">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Description"
@@ -23,27 +23,105 @@
 
 <body>
     <!-- Navigation -->
-    <?php include 'Elemente/navigation.php';?>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container justify-content-end">
+            <button id="navbar-toggler" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span id="navTogglerLine1" class="navTogglerLine"></span>
+                <span id="navTogglerLine2" class="navTogglerLine"></span>
+                <span id="navTogglerLine3" class="navTogglerLine"></span>
+            </button>
+            <a href="index.html" title="Zur Startseite">
+                <img id="berolina_wappen_mobile" class="d-lg-none position-absolute" src="Content/img/wappen.webp"
+                    alt="Wappen der Berolina Mittweida zu Lübeck">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav nav-justified w-100">
+                    <li class="nav-item">
+                        <a id="uerberUns_Link" class="nav-link link" href="ueberuns.html"
+                            title="Zur „Über Uns“-Seite">Über Uns</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="zimmer_Link" class="nav-link link" href="zimmer.html" title="Zu den Zimmern">Zimmer
+                            frei!</a>
+                    </li>
+                    <li id="berolina_wappen" class="nav-item d-none d-lg-block">
+                        <a class="nav-link" href="index.html" title="Zur Startseite">
+                            <img class="img-fluid" src="Content/img/wappen.webp"
+                                alt="Wappen der Berolina Mittweida zu Lübeck" />
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="semester_Link" class="nav-link link" href="semester.html"
+                            title="Zur Semesterübersicht">Semester</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="kontakt_Link" class="nav-link link" href="kontakt.html"
+                            title="Zur Kontaktübersicht">Kontakt</a>
+                    </li>
+                </ul>
+                <hr>
+                <ul class="nav_social_media d-lg-none">
+                    <li class="pe-2">
+                        <a href="https://www.facebook.com/Berolina/" target="_blank" title="Zur Facebook Seite">
+                            <svg width="30" height="30" viewBox="0 0 26 26" fill="black"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M1.45161 0.800781H23.7012C24.4633 0.800781 25.0813 1.418 25.0817 2.1796V24.4208V24.4214C25.0817 25.1834 24.4635 25.8008 23.7012 25.8008H1.45275C0.69067 25.8008 0.0726473 25.1836 0.0722656 24.422V2.18075C0.0722656 1.41895 0.689716 0.801163 1.45161 0.800781ZM17.5751 16.0784V25.7996H13.6798V16.0784H10.4418V12.2733H13.6798V9.47302C13.6798 6.22568 15.6459 4.45818 18.5187 4.45818C19.8946 4.45818 21.077 4.56155 21.4217 4.60777V8.00182H19.4407C17.8777 8.00182 17.5751 8.75075 17.5751 9.84988V12.2733H21.3121L20.8252 16.0784H17.5751Z"
+                                    fill="#black"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="ps-2">
+                        <a href="https://www.instagram.com/burschenschaft_berolina/" target="_blank"
+                            title="Zur Instagram Seite">
+                            <svg width="30" height="30" viewBox="0 0 26 26" fill="black"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.3248 0.800781H7.9463C3.63062 0.800781 0.130859 4.29922 0.130859 8.61328V17.9883C0.130859 22.3023 3.63062 25.8008 7.9463 25.8008H17.3248C21.6405 25.8008 25.1403 22.3023 25.1403 17.9883V8.61328C25.1403 4.29922 21.6405 0.800781 17.3248 0.800781ZM22.7956 17.9883C22.7956 21.0039 20.3416 23.457 17.3248 23.457H7.9463C4.92954 23.457 2.47549 21.0039 2.47549 17.9883V8.61328C2.47549 5.59766 4.92954 3.14453 7.9463 3.14453H17.3248C20.3416 3.14453 22.7956 5.59766 22.7956 8.61328V17.9883Z"
+                                    fill="#black"></path>
+                                <path
+                                    d="M12.6361 7.05078C9.18328 7.05078 6.38379 9.84922 6.38379 13.3008C6.38379 16.7523 9.18328 19.5508 12.6361 19.5508C16.089 19.5508 18.8885 16.7523 18.8885 13.3008C18.8885 9.84922 16.089 7.05078 12.6361 7.05078ZM12.6361 17.207C10.4822 17.207 8.72842 15.4539 8.72842 13.3008C8.72842 11.1461 10.4822 9.39453 12.6361 9.39453C14.7901 9.39453 16.5439 11.1461 16.5439 13.3008C16.5439 15.4539 14.7901 17.207 12.6361 17.207Z"
+                                    fill="#black"></path>
+                                <path
+                                    d="M19.3561 7.7406C19.9955 7.7406 20.5139 7.22241 20.5139 6.58319C20.5139 5.94397 19.9955 5.42578 19.3561 5.42578C18.7166 5.42578 18.1982 5.94397 18.1982 6.58319C18.1982 7.22241 18.7166 7.7406 19.3561 7.7406Z"
+                                    fill="#black"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <main class="container">
         <h1 class="text-center my-5 text-decoration-underline">Semesterprogramm</h1>
         <section class="row">
             <h2>Sommer Semester 2023</h2>
             <p>
-                Auch in diesem Farbensemester gibt es wieder viele spannende Veranstaltungen. Aber am meisten freuen wir uns auf den Gründungskommers am 13. Mai. Ihr seid herzlich eingeladen vorbeizuschauen!
+                Auch in diesem Farbensemester gibt es wieder viele spannende Veranstaltungen. Aber am meisten freuen wir
+                uns auf den Gründungskommers am 13. Mai. Ihr seid herzlich eingeladen vorbeizuschauen!
             </p>
             <div class="col-6 col-lg-2 m-auto me-lg-4 text-center">
-                <a href="Content/files/Berolina_Mittweida_zu_Luebeck_SemPro.pdf" target="_blank" title="PDF des Sommer Semesters 2023">
-                    <img class="img-fluid" src="Content/img/sempro_ss23.webp" alt="Semesterprogramm der Berolina Mittweida zu Lübeck">
+                <a href="Content/files/Berolina_Mittweida_zu_Luebeck_SemPro.pdf" target="_blank"
+                    title="PDF des Sommer Semesters 2023">
+                    <img class="img-fluid" src="Content/img/sempro_ss23.webp"
+                        alt="Semesterprogramm der Berolina Mittweida zu Lübeck">
                 </a>
-                <a class="contentLink" href="Content/files/Berolina_Mittweida_zu_Luebeck_SemPro.pdf" target="_blank" title="PDF des Sommer Semesters 2023"><small>Semesterprogramm als PDF</small></a>
+                <a class="contentLink" href="Content/files/Berolina_Mittweida_zu_Luebeck_SemPro.pdf" target="_blank"
+                    title="PDF des Sommer Semesters 2023"><small>Semesterprogramm als PDF</small></a>
             </div>
             <div class="col-12 d-lg-none"></div>
             <div class="col-6 col-lg-2 m-auto ms-lg-4 text-center mt-4 mt-lg-0">
-                <a href="https://calendar.google.com/calendar/ical/74f71b4c7c9508fd50a1e4318a1d9b99618ce624f2c7735bb1ea56ef3272a1f9%40group.calendar.google.com/public/basic.ics" target="_blank" title="ICS des Sommer Semesters 2023">
-                    <img class="img-fluid" src="Content/img/qr_sempro_berolina.webp" alt="QR Code Semesterprogramm der Berolina Mittweida zu Lübeck">
+                <a href="https://calendar.google.com/calendar/ical/74f71b4c7c9508fd50a1e4318a1d9b99618ce624f2c7735bb1ea56ef3272a1f9%40group.calendar.google.com/public/basic.ics"
+                    target="_blank" title="ICS des Sommer Semesters 2023">
+                    <img class="img-fluid" src="Content/img/qr_sempro_berolina.webp"
+                        alt="QR Code Semesterprogramm der Berolina Mittweida zu Lübeck">
                 </a>
-                <a class="contentLink" href="https://calendar.google.com/calendar/ical/74f71b4c7c9508fd50a1e4318a1d9b99618ce624f2c7735bb1ea56ef3272a1f9%40group.calendar.google.com/public/basic.ics" target="_blank" title="ICS des Sommer Semesters 2023"><small>Semesterprogramm als ICS</small></a>
+                <a class="contentLink"
+                    href="https://calendar.google.com/calendar/ical/74f71b4c7c9508fd50a1e4318a1d9b99618ce624f2c7735bb1ea56ef3272a1f9%40group.calendar.google.com/public/basic.ics"
+                    target="_blank" title="ICS des Sommer Semesters 2023"><small>Semesterprogramm als ICS</small></a>
             </div>
         </section>
         <section class="row my-5">
@@ -512,9 +590,11 @@
             <p>
                 Stammtisch an jedem Doonnerstag 20:00 Uhr hct.
                 <br>
-                Gäste sind zu allen nicht mit "intern" gekennzeichneten Veranstaltungen eingeladen und bei unserem Verbindungsleben herzlich willkommen.
+                Gäste sind zu allen nicht mit "intern" gekennzeichneten Veranstaltungen eingeladen und bei unserem
+                Verbindungsleben herzlich willkommen.
                 <br>
-                Alle Veranstaltungen finden, soweit nicht anders angegeben, in unserer Konstante, dem Korporationshaus in der Kronsforder Allee 70b, statt.
+                Alle Veranstaltungen finden, soweit nicht anders angegeben, in unserer Konstante, dem Korporationshaus
+                in der Kronsforder Allee 70b, statt.
             </p>
             <div class="col-12">
                 <table id="anmerkungenSempro">
@@ -547,82 +627,142 @@
             </div>
         </section>
     </main>
+    <!-- Begrüßung -->
+    <div id="greetings" class="row mt-5 d-none">
+        <div class="col-12 text-center">
+            <h3>
+                Burschenschaft Berolina Mittweida zu Lübeck
+            </h3>
+            <img class="center-block img-fluid" src="Content/img/zirkel.gif"
+                alt="Zirkel der B! Berolina Mittweida zu Lübeck">
+            <h3>im MSC und der neuenDB</h3>
+            <div id="closeGreetings">
+                [Weiter zur Seite]
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 text-end">
+                    <a class="pe-2" href="https://www.facebook.com/Berolina/" target="_blank"
+                        title="Zur Facebook Seite">
+                        <svg width="30" height="30" viewBox="0 0 26 26" fill="black" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M1.45161 0.800781H23.7012C24.4633 0.800781 25.0813 1.418 25.0817 2.1796V24.4208V24.4214C25.0817 25.1834 24.4635 25.8008 23.7012 25.8008H1.45275C0.69067 25.8008 0.0726473 25.1836 0.0722656 24.422V2.18075C0.0722656 1.41895 0.689716 0.801163 1.45161 0.800781ZM17.5751 16.0784V25.7996H13.6798V16.0784H10.4418V12.2733H13.6798V9.47302C13.6798 6.22568 15.6459 4.45818 18.5187 4.45818C19.8946 4.45818 21.077 4.56155 21.4217 4.60777V8.00182H19.4407C17.8777 8.00182 17.5751 8.75075 17.5751 9.84988V12.2733H21.3121L20.8252 16.0784H17.5751Z"
+                                fill="#black"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-6 text-start">
+                    <a class="ps-2" href="https://www.instagram.com/burschenschaft_berolina/" target="_blank"
+                        title="Zur Instagram Seite">
+                        <svg width="30" height="30" viewBox="0 0 26 26" fill="black" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.3248 0.800781H7.9463C3.63062 0.800781 0.130859 4.29922 0.130859 8.61328V17.9883C0.130859 22.3023 3.63062 25.8008 7.9463 25.8008H17.3248C21.6405 25.8008 25.1403 22.3023 25.1403 17.9883V8.61328C25.1403 4.29922 21.6405 0.800781 17.3248 0.800781ZM22.7956 17.9883C22.7956 21.0039 20.3416 23.457 17.3248 23.457H7.9463C4.92954 23.457 2.47549 21.0039 2.47549 17.9883V8.61328C2.47549 5.59766 4.92954 3.14453 7.9463 3.14453H17.3248C20.3416 3.14453 22.7956 5.59766 22.7956 8.61328V17.9883Z"
+                                fill="#black"></path>
+                            <path
+                                d="M12.6361 7.05078C9.18328 7.05078 6.38379 9.84922 6.38379 13.3008C6.38379 16.7523 9.18328 19.5508 12.6361 19.5508C16.089 19.5508 18.8885 16.7523 18.8885 13.3008C18.8885 9.84922 16.089 7.05078 12.6361 7.05078ZM12.6361 17.207C10.4822 17.207 8.72842 15.4539 8.72842 13.3008C8.72842 11.1461 10.4822 9.39453 12.6361 9.39453C14.7901 9.39453 16.5439 11.1461 16.5439 13.3008C16.5439 15.4539 14.7901 17.207 12.6361 17.207Z"
+                                fill="#black"></path>
+                            <path
+                                d="M19.3561 7.7406C19.9955 7.7406 20.5139 7.22241 20.5139 6.58319C20.5139 5.94397 19.9955 5.42578 19.3561 5.42578C18.7166 5.42578 18.1982 5.94397 18.1982 6.58319C18.1982 7.22241 18.7166 7.7406 19.3561 7.7406Z"
+                                fill="#black"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-6 text-end">
+                    <a href="impressum.html" target="_blank" title="Zum Impressum">Impressum</a>
+                </div>
+                <div class="col-6 text-start">
+                    <a href="datenschutz.html" target="_blank" title="Zum Datenschutz">Datenschutz</a>
+                </div>
+                <span class="position-absolute" style="left: 50%;padding:0;width: max-content;">|</span>
+            </div>
+            <div class="row mt-3">
+                <p class="text-center">
+                    &copy;
+                    <script language="JavaScript"> var aktuellesDatum = new Date(); var Jahr = aktuellesDatum.getFullYear(); document.write(Jahr);
+                    </script>
+                    - Burschenschaft Berolina Mittweida zu L&uuml;beck e.V.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="Content/lib/bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Seiten Script -->
+    <script type="text/javascript" src="Content/script.js"></script>
 
+    <script type="text/javascript">
 
-  <!-- Begrüßung -->
-  <?php include 'Elemente/begrüßung.php';?>
-  <!-- Footer -->
-  <?php include 'Elemente/footer.php';?>
-  <!-- Bootstrap JS -->
-  <script src="Content/lib/bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Seiten Script -->
-  <script type="text/javascript" src="Content/script.js"></script>
+        // Funktion zum Ausklappen des jetzigen Monats
+        $(document).ready(() => {
+            var d = new Date();
+            var month = d.getMonth() + 1;
+            var headingMonth = "#heading";
+            var collapseMonth = "#collapse";
 
-<script type="text/javascript">
+            switch (month) {
+                case 1:
+                    headingMonth += 'Januar';
+                    collapseMonth += 'Januar';
+                    break;
+                case 2:
+                    headingMonth += 'Februar';
+                    collapseMonth += 'Februar';
+                    break;
+                case 3:
+                    headingMonth += 'März';
+                    collapseMonth += 'März';
+                    break;
+                case 4:
+                    headingMonth += 'April';
+                    collapseMonth += 'April';
+                    break;
+                case 5:
+                    headingMonth += 'Mai';
+                    collapseMonth += 'Mai';
+                    break;
+                case 6:
+                    headingMonth += 'Juni';
+                    collapseMonth += 'Juni';
+                    break;
+                case 7:
+                    headingMonth += 'Juli';
+                    collapseMonth += 'Juli';
+                    break;
+                case 8:
+                    headingMonth += 'August';
+                    collapseMonth += 'August';
+                    break;
+                case 9:
+                    headingMonth += 'September';
+                    collapseMonth += 'September';
+                    break;
+                case 10:
+                    headingMonth += 'Oktober';
+                    collapseMonth += 'Oktober';
+                    break;
+                case 11:
+                    headingMonth += 'November';
+                    collapseMonth += 'November';
+                    break;
+                case 12:
+                    headingMonth += 'Dezember';
+                    collapseMonth += 'Dezember';
+                    break;
+            }
+            $('#semester_Link').addClass('active');
 
-    // Funktion zum Ausklappen des jetzigen Monats
-    $(document).ready(() => {
-        var d = new Date();
-        var month = d.getMonth() + 1;
-        var headingMonth = "#heading";
-        var collapseMonth = "#collapse";
-
-        switch (month) {
-            case 1:
-                headingMonth += 'Januar';
-                collapseMonth += 'Januar';
-                break;
-            case 2:
-                headingMonth += 'Februar';
-                collapseMonth += 'Februar';
-                break;
-            case 3:
-                headingMonth += 'März';
-                collapseMonth += 'März';
-                break;
-            case 4:
-                headingMonth += 'April';
-                collapseMonth += 'April';
-                break;
-            case 5:
-                headingMonth += 'Mai';
-                collapseMonth += 'Mai';
-                break;
-            case 6:
-                headingMonth += 'Juni';
-                collapseMonth += 'Juni';
-                break;
-            case 7:
-                headingMonth += 'Juli';
-                collapseMonth += 'Juli';
-                break;
-            case 8:
-                headingMonth += 'August';
-                collapseMonth += 'August';
-                break;
-            case 9:
-                headingMonth += 'September';
-                collapseMonth += 'September';
-                break;
-            case 10:
-                headingMonth += 'Oktober';
-                collapseMonth += 'Oktober';
-                break;
-            case 11:
-                headingMonth += 'November';
-                collapseMonth += 'November';
-                break;
-            case 12:
-                headingMonth += 'Dezember';
-                collapseMonth += 'Dezember';
-                break;
-        }
-        $('#semester_Link').addClass('active');
-
-        $(headingMonth + ' button').removeClass('collapsed');
-        $(headingMonth + ' button').attr('aria-expanded', 'true');
-        $(collapseMonth).addClass('show');
-    });
-</script>
+            $(headingMonth + ' button').removeClass('collapsed');
+            $(headingMonth + ' button').attr('aria-expanded', 'true');
+            $(collapseMonth).addClass('show');
+        });
+    </script>
 </body>
+
 </html>

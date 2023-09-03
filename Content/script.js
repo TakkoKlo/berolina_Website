@@ -1,4 +1,3 @@
-console.log("..");
 // Animation in Navigation Mobile
 $('#navbar-toggler').on('click', () => {
     if ($('#navbar-toggler').hasClass('menuOpen')) {

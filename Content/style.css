@@ -39,7 +39,6 @@ body {
     font-family: 'Roboto Regular', sans-serif;
     overflow-x: hidden;
     color: #333333;
-    font-size: 110%;
 }
 
 h1,
@@ -214,7 +213,7 @@ hr {
 .btn-primary {
     text-decoration: none;
     width: auto;
-    display: block ruby;
+    display: flex;
     border: none;
     background: #131313;
     color: #fff;
@@ -242,6 +241,7 @@ hr {
     background-repeat: no-repeat;
     vertical-align: middle;
     margin-left: 7px;
+    align-self: center;
 }
 
 .btn-primary:hover>.pfeil {

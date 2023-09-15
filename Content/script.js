@@ -1,11 +1,7 @@
 // Zum Start des Webseite: Prüfen ob Begrüßung oder Dark Mode gesetzt wurde
 $(document).ready(() => {
-    console.log("checked");
     checkForFirstSiteVisitOfDay();
-    checkForDarkModeCookie();
 });
-
-console.log("moin22");
 
 // Animation in Navigation Mobile
 $('#navbar-toggler').on('click', () => {
@@ -25,7 +21,6 @@ $('#navbar-toggler').on('click', () => {
 
 // Schließt das Fenster um auf die Seite zu kommen
 $('#closeGreetings').click(() => {
-    console.log("geschlossen");
     setDayCookie();
     checkForFirstSiteVisitOfDay();
 });
@@ -47,7 +42,6 @@ $('#dark-mode-toggler').click(() => {
 // Gibt Zirkel Gif wider, wenn nicht
 function checkForFirstSiteVisitOfDay() {
     var dayCookie = getCookie("daylyVisitOnWebsite");
-    console.log("checkForDayVisit");
     if (dayCookie == null) {
         $('#greetings').removeClass('d-none');
         $('#dark-mode-toggler').addClass('d-none');
@@ -56,6 +50,7 @@ function checkForFirstSiteVisitOfDay() {
         $('nav').addClass('d-none');
     }
     else {
+        checkForDarkModeCookie();
         $('#greetings').addClass('d-none');
         $('#dark-mode-toggler').removeClass('d-none');
         $('main').removeClass('d-none');

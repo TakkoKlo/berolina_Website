@@ -16,6 +16,10 @@
         url("./fonts/Roboto-Bold.woff2") format("woff2");
 }
 
+#instagramSection blockquote {
+    min-width: auto!important;
+}
+
 #dark-mode-toggler {
     width: 50px;
     height: 50px;

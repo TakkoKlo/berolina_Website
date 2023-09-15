@@ -61,7 +61,7 @@ function checkForFirstSiteVisitOfDay() {
 
 function checkForDarkModeCookie() {
     var darkModeCookie = getCookie('darkModeChecked');
-
+console.log("Dark Mode?");
     if (darkModeCookie == null) {
         $('#body-content').removeClass('dark-mode');
         $('#dark-mode-toggler').removeClass('dark-mode');

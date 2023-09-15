@@ -20,8 +20,12 @@
     min-width: auto!important;
 }
 
-#instagramSection .Header {
-    display: none;
+#instagramSection .Header,
+#instagramSection .HoverCard,
+#instagramSection .Feedback,
+#instagramSection .SocialProof,
+#instagramSection .Footer {
+    display: none!important;
 }
 
 #dark-mode-toggler {

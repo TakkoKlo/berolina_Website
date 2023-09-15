@@ -9,7 +9,7 @@
   <meta name="Description"
     content="Du suchst eine Studentenverbindung in L&uuml;beck ? Dann komme uns auf dem Koprporationshaus L&uuml;beck Besuchen." />
   <meta name="Keywords"
-    content="Studentenverbindung, Burschenschaft, Verbindung, L&uuml;beck, Hansestadt, Studentenwohnheim" />
+    content="Studentenverbindung, Burschenschaft, Verbindung, L&uuml;beck, Hansestadt, Studentenwohnheim, Bundesleben, Stammtisch, Kneipe, Farten, Seminar, Erfolg, Fechten" />
   <title>Studentenverbindung - Burschenschaft Berolina Mittweida zu Lübeck</title>
   <!-- Favicon -->
   <link rel="shortcut icon" href="Content/img/favicon.ico">
@@ -21,7 +21,11 @@
   <script src="Content/lib/jquery-3.7.1.min.js"></script>
 </head>
 
-<body>
+<body id="body-content">
+  <!-- Dark Mode Toggler Desktop -->
+  <div id="dark-mode-toggler">
+    <img class="img-fluid" src="Content/img/moon.png" alt="">
+  </div>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container justify-content-end">
@@ -32,8 +36,8 @@
         <span id="navTogglerLine3" class="navTogglerLine"></span>
       </button>
       <a href="index.html" title="Zur Startseite">
-        <img id="berolina_wappen_mobile" class="d-lg-none position-absolute" src="Content/img/wappen.webp"
-          alt="Wappen der Berolina Mittweida zu Lübeck">
+        <img id="berolina_wappen_mobile" class="d-lg-none position-absolute" data-src="Content/img/wappen.webp"
+          src="Content/img/wappen.webp" alt="Wappen der Berolina Mittweida zu Lübeck">
       </a>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav nav-justified w-100">
@@ -45,7 +49,8 @@
           </li>
           <li id="berolina_wappen" class="nav-item d-none d-lg-block">
             <a class="nav-link" href="index.html" title="Zur Startseite">
-              <img class="img-fluid" src="Content/img/wappen.webp" alt="Wappen der Berolina Mittweida zu Lübeck" />
+              <img class="img-fluid" data-src="Content/img/wappen.webp" src="Content/img/wappen.webp"
+                alt="Wappen der Berolina Mittweida zu Lübeck" />
             </a>
           </li>
           <li class="nav-item">
@@ -89,42 +94,45 @@
   <header class="conainter-fluid container-lg">
     <img class="img-fluid" src="Content/img/seitenHeader/lübeck.webp" alt="Skyline von Lübeck bei Nacht">
   </header>
-
+  <!-- Main -->
   <main class="container">
     <h1 class="text-center my-5 text-decoration-underline">Bundesleben</h1>
+    <!-- Stammtisch -->
     <section id="stammtisch" class="row mb-3 justify-content-center">
       <h2 class="mb-4 text-center text-md-start">Stammtische</h2>
       <div class="col-10 col-md-4 mb-2 mb-md-0">
-        <img class="img-fluid" src="Content/img/bundesleben/stammtisch.webp"
-          alt="Bild von einem Stammtisch der Berolina">
+        <img class="b-lazy img-fluid" data-src="Content/img/bundesleben/stammtisch.webp"
+          src="Content/img/bundesleben/stammtisch.webp" alt="Bild von einem Stammtisch der Berolina">
       </div>
       <div class="col-12 col-md-8 contentText">
         <p>
           Der Stammtisch der Berolina wird jede Woche Donnerstag auf unserem Saal abgehalten.
           Hierbei kochen die anwesenden Aktiven gemeinsam zusammen und besprechen nach dem Essen wichtige Themen rund um
           die Verbindung.
-          Die wichtigsten Themen sind meist welche, die sich um die Organisation von Veranstaltungen drehen.
+          Die wichtigsten Themen sind meist welche, die sich um die Organisation von anstehenden Veranstaltungen drehen.
         </p>
         <p>
-          Kneipen, das Stifungsfest, die jährliche stattfindenden Feuerzangenbowlen und Sommerfeiern sind nur einige
+          Kneipen, das Stifungsfest, die jährlich stattfindenden Feuerzangenbowlen und Sommerfeiern sind nur einige
           Beispiele für Veranstaltungen, für welche Essen und Trinken eingekauft, Anmeldungen festgehalten oder auch
-          Ordnung auf dem Saal geschaffen werden muss.
+          Ordnung auf dem Haus geschaffen werden muss.
           Auch Themen wie die Finanzieung von Projekten, geplante Ausflüge und Fahrten oder auch E-Mail- und Postverkehr
-          sind weiderkehrende Gespräche auf den Stammtischen.
+          sind wiederkehrende Gespräche auf den Stammtischen.
         </p>
       </div>
     </section>
     <hr>
+    <!-- Seminar -->
     <section id="seminar" class="row mb-3 justify-content-center">
       <h2 class="mb-4 text-center text-md-start">Seminare</h2>
       <div class="col-10 col-md-4 mb-2 mb-md-0">
-        <img class="img-fluid" src="Content/img/bundesleben/seminar.webp"
-          alt="Bild von einem Vortrag über Bewerbungsgespräche">
+        <img class="b-lazy img-fluid" data-src="Content/img/bundesleben/seminar.webp"
+          src="Content/img/bundesleben/seminar.webp" alt="Bild von einem Vortrag über Bewerbungsgespräche">
       </div>
       <div class="col-12 col-md-8 contentText">
         <p>
-          Ob Vorträge, Seminare oder persönlicher Austausch: ein Grundprinzip der Berolina ist es, seine Mitglieder in
-          verschiedensten Vorträgen, wie beispielsweise Künstliche Intelligenz, Energiewitschaft oder auch nur
+          Ob Vorträge, Seminare oder persönlicher Austausch: ein Grundprinzip der Berolina ist es, seine Mitglieder
+          durch
+          verschiedenste Vorträge, wie beispielsweise Künstliche Intelligenz, Energiewirtschaft oder auch nur
           Whisky-Tastings, weiterzubilden.
           Hierbei kommen unsere älteren Mitglieder (Alte Herren) auf unserer Haus und bereichern uns mit ihrer Expertise
           zu verschiedensten Themen.
@@ -132,21 +140,22 @@
         <p>
           Die Berolina ist ebenfalls Mitglied der <a class="contentLink" href="https://www.neuedb-akademie.de/"
             title="Link zur NeueDB-Akademie Internetseite" target="_blank">NeueDB-Akademie</a>, welche sich als Aufgabe
-          setzt, ihre Mitglieder mit zahlreichen Vorträgen wie „Selbst- und Zeitmanagement“, „Arbeiten im Team“,
+          setzt, ihre Mitglieder durch zahlreiche Vorträge wie „Selbst- und Zeitmanagement“, „Arbeiten im Team“,
           „Lebendig reden und votragen“ und vielem mehr zu unterrichten.
         </p>
       </div>
     </section>
     <hr>
+    <!-- Erfolg -->
     <section id="erfolg" class="row mb-3 justify-content-center">
       <h2 class="mb-4 text-center text-md-start">Erfolg im Studium</h2>
       <div class="col-10 col-md-4 mb-2 mb-md-0">
-        <img class="img-fluid" src="Content/img/bundesleben/erfolg.webp"
-          alt="Bundesbruder beim Erhalt seines Studiumsabschlusses">
+        <img class="b-lazy img-fluid" data-src="Content/img/bundesleben/erfolg.webp"
+          src="Content/img/bundesleben/erfolg.webp" alt="Bundesbruder beim Erhalt seines Studiumsabschlusses">
       </div>
       <div class="col-12 col-md-8 contentText">
         <p>
-          Egal, ob Elektrotechnik, Biochemie, Informatik, Robotic, Architektur oder Medizin: wir helfen unseren Aktiven
+          Egal, ob Elektrotechnik, Biochemie, Informatik, Robotik, Architektur oder Medizin: wir helfen unseren Aktiven
           Studierenden bestmöglich ihre Studien auf der Universität abzuschließen.
           Mit Experten jeglicher Art aus unseren Reihen, haben diese immer den geeigneten Ansprechpartner, sollten sie
           Probleme im Verständnis zu spezifischen Themen haben.
@@ -156,18 +165,21 @@
           Studium in Regelzeit abzuschließen.
         </p>
         <p>
-          Hat es ein Bundesbruder geschafft sein Studium erfolgreich abzuschließen, bemühen wir uns ihm einen
+          Hat es ein Bundesbruder geschafft sein Studium erfolgreich zu absolvieren, bemühen wir uns, ihm einen
           reibungslosen Einstieg ins Berufsleben zu bieten.
-          Auch bei der Jobsuche ist er mit unseren vielen Alten Herren und dem Netzwerk der Berolina bereits gut
+          Auch bei der Jobsuche ist er mit unseren vielen Alten Herren und dem deutschlandweitem Netzwerk der Berolina
+          bereits gut
           aufgestellt.
         </p>
       </div>
     </section>
     <hr>
+    <!-- Kneipe -->
     <section id="kneipe" class="row mb-3 justify-content-center">
       <h2 class="mb-4 text-center text-md-start">Kneipen</h2>
       <div class="col-10 col-md-4 mb-2 mb-md-0">
-        <img class="img-fluid" src="Content/img/bundesleben/seminar.webp" alt="Bild von Anwesenden einer Kneipe">
+        <img class="b-lazy img-fluid" data-src="Content/img/bundesleben/seminar.webp"
+          src="Content/img/bundesleben/seminar.webp" alt="Bild von Anwesenden einer Kneipe">
       </div>
       <div class="col-12 col-md-8 contentText">
         <p>
@@ -188,11 +200,12 @@
       </div>
     </section>
     <hr>
+    <!-- Ausfahrt -->
     <section id="ausfahrt" class="row mb-3 justify-content-center">
       <h2 class="mb-4 text-center text-md-start">Ausflüge und Fahrten</h2>
       <div class="col-10 col-md-4 mb-2 mb-md-0">
-        <img class="img-fluid" src="Content/img/bundesleben/seminar.webp"
-          alt="Bild von einem Vortrag über Bewerbungsgespräche">
+        <img class="b-lazy img-fluid" data-src="Content/img/bundesleben/ausfahrt.webp"
+          src="Content/img/bundesleben/ausfahrt.webp" alt="Berolina auf de Orgelfelsen">
       </div>
       <div class="col-12 col-md-8 contentText">
         <p>
@@ -211,16 +224,19 @@
       </div>
     </section>
     <hr>
+    <!-- Fechten -->
     <section id="fechten" class="row mb-3 justify-content-center">
       <h2 class="mb-4 text-center text-md-start">Fechten</h2>
       <div class="col-10 col-md-4 mb-2 mb-md-0">
-        <img class="img-fluid" src="Content/img/bundesleben/fechten.webp" alt="Bild von Fechtmaterial">
+        <img class="b-lazy img-fluid" data-src="Content/img/bundesleben/fechten.webp"
+          src="Content/img/bundesleben/fechten.webp" alt="Bild von Fechtmaterial">
       </div>
       <div class="col-12 col-md-8 contentText">
         <p>
           Die Berolina Mittweida zu Lübeck ist eine „fakultativ schlagende“ Verbindung.
-          Dies bedeutet, dass wir unseren Aktiven den Ungang mit dem Schläger und vieles Wissenswertes rund ums Fechten
-          beibringen, diese aber nicht genötigt werden, eine Partie gegen einen Contrahenten mit schwarfer Klinge
+          Dies bedeutet, dass wir unseren Aktiven den Ungang mit dem Schläger und vieles Wissenswertes rund um das
+          Fechten beibringen, diese aber nicht verpflichtet werden, eine Partie gegen einen Contrahenten mit schwarfer
+          Klinge
           auszuführen.
         </p>
         <p>
@@ -228,12 +244,12 @@
           Klinge gegen einen befreundeten Contrahenten stattfinden und sauber ausgeführt werden.
         </p>
         <p>
-          Dennoch stehen wir frei, Bundesbrüdern, falls sie in Erwägung ziehen eine richtige Mensur auszutragen, diese
+          Dennoch stehen wir Bundesbrüdern nicht im Wege, falls sie in Erwägung ziehen eine richtige Mensur auszutragen,
+          und diese
           mit allen verfügbaren Mitteln zu unterstützen und auf diese vorzubereiten.
         </p>
       </div>
     </section>
-
   </main>
   <!-- Begrüßung -->
   <div id="greetings" class="row mt-5 d-none">
@@ -248,23 +264,28 @@
       </div>
     </div>
   </div>
+
   <!-- Footer -->
   <footer>
     <div class="container">
       <div class="row">
+        <!-- Facebook -->
         <div class="col-6 text-end">
           <a class="pe-2" href="https://www.facebook.com/Berolina/" target="_blank" title="Zur Facebook Seite">
-            <svg width="30" height="30" viewBox="0 0 26 26" fill="black" xmlns="http://www.w3.org/2000/svg">
+            <svg class="socialMediaIcon" width="30" height="30" viewBox="0 0 26 26" fill="black"
+              xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M1.45161 0.800781H23.7012C24.4633 0.800781 25.0813 1.418 25.0817 2.1796V24.4208V24.4214C25.0817 25.1834 24.4635 25.8008 23.7012 25.8008H1.45275C0.69067 25.8008 0.0726473 25.1836 0.0722656 24.422V2.18075C0.0722656 1.41895 0.689716 0.801163 1.45161 0.800781ZM17.5751 16.0784V25.7996H13.6798V16.0784H10.4418V12.2733H13.6798V9.47302C13.6798 6.22568 15.6459 4.45818 18.5187 4.45818C19.8946 4.45818 21.077 4.56155 21.4217 4.60777V8.00182H19.4407C17.8777 8.00182 17.5751 8.75075 17.5751 9.84988V12.2733H21.3121L20.8252 16.0784H17.5751Z"
                 fill="#black"></path>
             </svg>
           </a>
         </div>
+        <!-- Instagram -->
         <div class="col-6 text-start">
           <a class="ps-2" href="https://www.instagram.com/burschenschaft_berolina/" target="_blank"
             title="Zur Instagram Seite">
-            <svg width="30" height="30" viewBox="0 0 26 26" fill="black" xmlns="http://www.w3.org/2000/svg">
+            <svg class="socialMediaIcon" width="30" height="30" viewBox="0 0 26 26" fill="black"
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M17.3248 0.800781H7.9463C3.63062 0.800781 0.130859 4.29922 0.130859 8.61328V17.9883C0.130859 22.3023 3.63062 25.8008 7.9463 25.8008H17.3248C21.6405 25.8008 25.1403 22.3023 25.1403 17.9883V8.61328C25.1403 4.29922 21.6405 0.800781 17.3248 0.800781ZM22.7956 17.9883C22.7956 21.0039 20.3416 23.457 17.3248 23.457H7.9463C4.92954 23.457 2.47549 21.0039 2.47549 17.9883V8.61328C2.47549 5.59766 4.92954 3.14453 7.9463 3.14453H17.3248C20.3416 3.14453 22.7956 5.59766 22.7956 8.61328V17.9883Z"
                 fill="#black"></path>
@@ -299,7 +320,12 @@
     </div>
   </footer>
   <!-- Bootstrap JS -->
-  <script src="Content/lib/bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="Content/lib/bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Lazy Image Load -->
+  <script type="text/javascript" src="Content/lib/blazy.min.js"></script>
+  <script> var blazy = new Blazy({}); </script>
+  <!-- Fade Up Function -->
+  <script type="text/javascript" src="Content/lib/fadeup.js"></script>
   <!-- Seiten Script -->
   <script type="text/javascript" src="Content/script.js"></script>
 </body>

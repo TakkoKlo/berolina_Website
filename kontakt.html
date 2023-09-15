@@ -24,7 +24,11 @@
   <script src="Content/lib/Leaflet/leaflet.js"></script>
 </head>
 
-<body>
+<body id="body-content">
+  <!-- Dark Mode Toggler Desktop -->
+  <div id="dark-mode-toggler">
+    <img class="img-fluid" src="Content/img/moon.png" alt="">
+  </div>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container justify-content-end">
@@ -88,69 +92,79 @@
       </div>
     </div>
   </nav>
+  <!-- Main -->
   <main class="container">
     <h1 class="text-center my-5 text-decoration-underline">Kontakt</h1>
     <section class="row mb-5 justify-content-center">
+      <!-- Aktiven Chargen -->
       <h2 class="mb-4 text-center">Aktivitas Chargen</h2>
       <div class="kontaktKachel shadow-sm col-10 col-sm-8 col-lg-4 col-xxl-3 text-center me-lg-5 p-3">
-        <img class="img-fluid kontaktImg" src="Content/img/mitglieder/knips.webp" alt="Foto des Präsiden">
+        <img class="b-lazy img-fluid kontaktImg" data-src="Content/img/mitglieder/knips.webp"
+          src="Content/img/mitglieder/knips.webp" alt="Foto des Präsiden">
         <h3>X – Präside</h3>
         <h5>Stud. B. Sc. Tobias Neuhold</h5>
-        <a href="mailto:aktivenx@berolina-mittweida.de"
+        <a href="mailto:aktivenx@berolina-mittweida.de" class="contentLink"
           title="E-Mail an aktivenx@berolina-mittweida.de">aktivenx@berolina-mittweida.de</a>
       </div>
       <div class="kontaktKachel shadow-sm col-10 col-sm-8 col-lg-4 col-xxl-3 text-center ms-lg-5 p-3 mt-4 mt-lg-0">
-        <img class="img-fluid kontaktImg" src="Content/img/mitglieder/merlin.webp" alt="Foto des Schriftwartes">
+        <img class="b-lazy img-fluid kontaktImg" data-src="Content/img/mitglieder/merlin.webp"
+          src="Content/img/mitglieder/merlin.webp" alt="Foto des Schriftwartes">
         <h3>XX – Schriftwart</h3>
         <h5>Stud. B. Sc. Dennis Sterger</h5>
-        <a href="mailto:aktivenxx@berolina-mittweida.de"
+        <a href="mailto:aktivenxx@berolina-mittweida.de" class="contentLink"
           title="E-Mail an aktivenxx@berolina-mittweida.de">aktivenxx@berolina-mittweida.de</a>
       </div>
       <div class="col-12 d-none d-lg-block"></div>
       <div class="kontaktKachel shadow-sm col-10 col-sm-8 col-lg-4 col-xxl-3 text-center me-lg-5 p-3 mt-4">
-        <img class="img-fluid kontaktImg" src="Content/img/mitglieder/taco.webp" alt="Foto des Kassenwartes">
+        <img class="b-lazy img-fluid kontaktImg" data-src="Content/img/mitglieder/taco.webp"
+          src="Content/img/mitglieder/taco.webp" alt="Foto des Kassenwartes">
         <h3>XXX – Kassenwart</h3>
         <h5>B. Sc. Dominik Klose</h5>
-        <a href="mailto:aktivenxxx@berolina-mittweida.de"
+        <a href="mailto:aktivenxxx@berolina-mittweida.de" class="contentLink"
           title="E-Mail an aktivenxxx@berolina-mittweida.de">aktivenxxx@berolina-mittweida.de</a>
       </div>
       <div class="kontaktKachel shadow-sm col-10 col-sm-8 col-lg-4 col-xxl-3 text-center ms-lg-5 p-3 mt-4">
-        <img class="img-fluid kontaktImg" src="Content/img/mitglieder/mauser.webp" alt="Foto des Fuxmajors">
+        <img class="b-lazy img-fluid kontaktImg" data-src="Content/img/mitglieder/mauser.webp"
+          src="Content/img/mitglieder/mauser.webp" alt="Foto des Fuxmajors">
         <h3>FM – Fuxmajor</h3>
         <h5>Stud. B. Sc. Nico Metger</h5>
-        <a href="mailto:aktivenfm@berolina-mittweida.de"
+        <a href="mailto:aktivenfm@berolina-mittweida.de" class="contentLink"
           title="E-Mail an aktivenfm@berolina-mittweida.de">aktivenfm@berolina-mittweida.de</a>
       </div>
     </section>
     <hr>
+    <!-- Altherren Chargen -->
     <section class="row mt-4 mb-5 justify-content-center">
       <h2 class="mb-4 text-center">Altherren Chargen</h2>
       <div class="kontaktKachel shadow-sm col-10 col-sm-8 col-lg-4 col-xxl-3 text-center me-lg-5 p-3">
-        <img class="img-fluid kontaktImg" src="Content/img/mitglieder/zeus.webp" alt="Foto des Altherren Präsiden">
+        <img class="b-lazy img-fluid kontaktImg" data-src="Content/img/mitglieder/zeus.webp"
+          src="Content/img/mitglieder/zeus.webp" alt="Foto des Altherren Präsiden">
         <h3>AHVX – Präside</h3>
         <h5>Dr. med. Thomas Hoffmann</h5>
-        <a href="mailto:ahvx@berolina-mittweida.de"
+        <a href="mailto:ahvx@berolina-mittweida.de" class="contentLink"
           title="E-Mail an ahvx@berolina-mittweida.de">ahvx@berolina-mittweida.de</a>
       </div>
       <div class="kontaktKachel shadow-sm col-10 col-sm-8 col-lg-4 col-xxl-3 text-center ms-lg-5 p-3 mt-4 mt-lg-0">
-        <img class="img-fluid kontaktImg" src="Content/img/mitglieder/maximus.webp"
-          alt="Foto des Altherren Schriftwartes">
+        <img class="b-lazy img-fluid kontaktImg" data-src="Content/img/mitglieder/maximus.webp"
+          src="Content/img/mitglieder/maximus.webp" alt="Foto des Altherren Schriftwartes">
         <h3>AHVXX – Schriftwart</h3>
         <h5>Dipl. Ing. Max-Valentin Feest</h5>
-        <a href="mailto:ahvxx@berolina-mittweida.de"
+        <a href="mailto:ahvxx@berolina-mittweida.de" class="contentLink"
           title="E-Mail an ahvxx@berolina-mittweida.de">ahvxx@berolina-mittweida.de</a>
       </div>
       <div class="col-12 d-none d-lg-block"></div>
       <div class="kontaktKachel shadow-sm col-10 col-sm-8 col-lg-4 col-xxl-3 text-center me-lg-5 p-3 mt-4">
-        <img class="img-fluid kontaktImg" src="Content/img/mitglieder/bert.webp" alt="Foto des Altherren Kassenwartes">
+        <img class="b-lazy img-fluid kontaktImg" data-src="Content/img/mitglieder/bert.webp"
+          src="Content/img/mitglieder/bert.webp" alt="Foto des Altherren Kassenwartes">
         <h3>AHVXXX – Kassenwart</h3>
         <h5>Dipl. Ing. Jan Philipp Mync-Kohlschmidt</h5>
-        <a href="mailto:ahvxxx@berolina-mittweida.de"
+        <a href="mailto:ahvxxx@berolina-mittweida.de" class="contentLink"
           title="E-Mail an ahvxxx@berolina-mittweida.de">ahvxxx@berolina-mittweida.de</a>
       </div>
       <div class="col-4 col-xxl-3 ms-lg-5 d-none d-lg-block"></div>
     </section>
     <hr>
+    <!-- Konstante -->
     <section class="row justify-content-center">
       <h2 class="mb-4 text-center">Konstante</h2>
       <p class="col-12 col-lg-8">
@@ -185,19 +199,21 @@
   <footer>
     <div class="container">
       <div class="row">
+        <!-- Facebook -->
         <div class="col-6 text-end">
           <a class="pe-2" href="https://www.facebook.com/Berolina/" target="_blank" title="Zur Facebook Seite">
-            <svg width="30" height="30" viewBox="0 0 26 26" fill="black" xmlns="http://www.w3.org/2000/svg">
+            <svg class="socialMediaIcon" width="30" height="30" viewBox="0 0 26 26" fill="black" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M1.45161 0.800781H23.7012C24.4633 0.800781 25.0813 1.418 25.0817 2.1796V24.4208V24.4214C25.0817 25.1834 24.4635 25.8008 23.7012 25.8008H1.45275C0.69067 25.8008 0.0726473 25.1836 0.0722656 24.422V2.18075C0.0722656 1.41895 0.689716 0.801163 1.45161 0.800781ZM17.5751 16.0784V25.7996H13.6798V16.0784H10.4418V12.2733H13.6798V9.47302C13.6798 6.22568 15.6459 4.45818 18.5187 4.45818C19.8946 4.45818 21.077 4.56155 21.4217 4.60777V8.00182H19.4407C17.8777 8.00182 17.5751 8.75075 17.5751 9.84988V12.2733H21.3121L20.8252 16.0784H17.5751Z"
                 fill="#black"></path>
             </svg>
           </a>
         </div>
+        <!-- Instagram -->
         <div class="col-6 text-start">
           <a class="ps-2" href="https://www.instagram.com/burschenschaft_berolina/" target="_blank"
             title="Zur Instagram Seite">
-            <svg width="30" height="30" viewBox="0 0 26 26" fill="black" xmlns="http://www.w3.org/2000/svg">
+            <svg class="socialMediaIcon" width="30" height="30" viewBox="0 0 26 26" fill="black" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M17.3248 0.800781H7.9463C3.63062 0.800781 0.130859 4.29922 0.130859 8.61328V17.9883C0.130859 22.3023 3.63062 25.8008 7.9463 25.8008H17.3248C21.6405 25.8008 25.1403 22.3023 25.1403 17.9883V8.61328C25.1403 4.29922 21.6405 0.800781 17.3248 0.800781ZM22.7956 17.9883C22.7956 21.0039 20.3416 23.457 17.3248 23.457H7.9463C4.92954 23.457 2.47549 21.0039 2.47549 17.9883V8.61328C2.47549 5.59766 4.92954 3.14453 7.9463 3.14453H17.3248C20.3416 3.14453 22.7956 5.59766 22.7956 8.61328V17.9883Z"
                 fill="#black"></path>
@@ -212,6 +228,7 @@
         </div>
       </div>
       <hr>
+      <!-- Impressum + Datenschutz -->
       <div class="row">
         <div class="col-6 text-end">
           <a href="impressum.html" target="_blank" title="Zum Impressum">Impressum</a>
@@ -232,38 +249,19 @@
     </div>
   </footer>
   <!-- Bootstrap JS -->
-  <script src="Content/lib/bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="Content/lib/bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Lazy Image Load -->
+  <script type="text/javascript" src="Content/lib/blazy.min.js"></script>
+  <script> var blazy = new Blazy({}); </script>
+  <!-- Fade Up Function -->
+  <script type="text/javascript" src="Content/lib/fadeup.js"></script>
+  <!-- Leaflet Map -->
+  <script src="Content/lib/custom-leaflet.js"></script>
   <!-- Seiten Script -->
   <script type="text/javascript" src="Content/script.js"></script>
-
+  <!-- Spezifisches Seiten Script -->
   <script type="text/javascript">
     $('#kontakt_Link').addClass('active');
-
-    // Leaflet Attribute
-    var map = L.map('map').setView([53.8525, 10.69], 13);
-    var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
-
-    var standardIcon = L.Icon.extend({
-      options: {
-        shadowUrl: 'Content/lib/Leaflet/images/marker-shadow.png',
-        iconSize: [25, 41],
-        shadowSize: [40, 50],
-        iconAnchor: [12, 41],
-        shadowAnchor: [4, 62],
-        popupAnchor: [-3, -76]
-      }
-    });
-
-    var berolinaIcon = new standardIcon({ iconUrl: 'Content/lib/Leaflet/images/berolina_map_marker.png' });
-    var uniIcon = new standardIcon({ iconUrl: 'Content/lib/Leaflet/images/marker-icon-2x.png' });
-    var lübeckIcon = new standardIcon({ iconUrl: 'Content/lib/Leaflet/images/marker-icon-2x.png' });
-
-    var mBerolina = L.marker([53.84657345950489, 10.682917057670299], { icon: berolinaIcon }).addTo(map).bindPopup('Das Korporationshaus', { autoClose: false }).openPopup();
-    var mUniversität = L.marker([53.83442099279524, 10.703647997530705], { icon: uniIcon }).addTo(map).bindPopup('Die Universität');
-    var mLübeck = L.marker([53.86642783061478, 10.687160749005853], { icon: uniIcon }).addTo(map).bindPopup('Die Altstadt Lübecks');
   </script>
 </body>
 

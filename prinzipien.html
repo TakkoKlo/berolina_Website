@@ -21,7 +21,11 @@
   <script src="Content/lib/jquery-3.7.1.min.js"></script>
 </head>
 
-<body>
+<body id="body-content">
+  <!-- Dark Mode Toggler Desktop -->
+  <div id="dark-mode-toggler">
+    <img class="img-fluid" src="Content/img/moon.png" alt="">
+  </div>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container justify-content-end">
@@ -85,87 +89,140 @@
       </div>
     </div>
   </nav>
-
+  <!-- Header -->
   <header class="conainter-fluid container-lg">
     <img class="img-fluid" src="Content/img/seitenHeader/prinzipien.webp" alt="Foto einer Burschung">
   </header>
-
+  <!-- Main -->
   <main class="container">
     <h1 class="text-center my-5 text-decoration-underline">Prinzipien</h1>
+    <!-- Freundschaft -->
     <section id="freundschaft" class="row mb-3 justify-content-center">
-      <h2 class="mb-3 text-center text-md-start">Freundschaft</h2>
-      <div class="col-12 contentText">
+      <h2 class="mb-4 text-center text-md-start">Freundschaft</h2>
+      <div class="col-10 col-md-4 mb-2 mb-md-0">
+        <img class="b-lazy img-fluid" data-src="Content/img/prinzipien/freundschaft.webp"
+          src="Content/img/prinzipien/freundschaft.webp" alt="Bild von Kneipanwesenden">
+      </div>
+      <div class="col-12 col-md-8 contentText">
         <p>
-          Die Burschenschaft Berolina Mittweida zu Lübeck wurde vor <span id="jahrSeitGründung"></span> Jahren, am 12.
-          November 1895, von fünf
-          Studenten aus Berlin gegründet, welche am Technikum Mittweida in Sachsen studierten.
+          Freundschaft ist ein unschätzbares Geschenk im Leben. Sie bedeutet Vertrauen, Unterstützung und gemeinsame
+          Erlebnisse.
+          Unsere Freundschaft geht über Oberflächlichkeiten hinaus und lässt uns akzeptieren, wer wir sind.
         </p>
         <p>
-          Das Technikum Mittweida galt zur damaligen Zeit als eine der renommiertesten Ausbildungseinrichtungen im
-          Innen- sowie benachbartem Ausland. Zur Gründungszeit der Burschenschaft Berolina bestanden vor Ort über 126
-          studentische Verbindungen und Vereine.
+          Sie ermutigt uns, unser Bestes zu geben und bietet Trost in schweren Zeiten. Das Freundschaftsband der Berolina baut auf
+          gemeinsamen Erfahrungen und Vertrauen auf.
+          Wahre Freundschaft ist kostbar und erfüllt das Leben mit Liebe und Wärme.
+        </p>
+        <p>
+          In der Berolina schreiben wir Freundschaft groß. Durch Lebensbundprinzip bleiben wir ein Leben lang befreundet
+          und teilen unsere Erfahrung gemeinsam. Wir pflegen und schätzen sie, denn sie bereichert unser Leben auf unvergleichliche
+          Weise.
         </p>
       </div>
     </section>
     <hr>
+    <!-- Toleranz -->
     <section id="toleranz" class="row mb-3 justify-content-center">
-      <h2 class="mb-3 mt-3 text-center text-md-start">Toleranz</h2>
-      <div class="col-12 contentText">
+      <h2 class="mb-4 text-center text-md-start">Toleranz</h2>
+      <div class="col-10 col-md-4 mb-2 mb-md-0">
+        <img class="b-lazy img-fluid" data-src="Content/img/prinzipien/toleranz.webp"
+          src="Content/img/prinzipien/toleranz.webp" alt="Bild vom Kommers mit Frauen">
+      </div>
+      <div class="col-12 col-md-8 contentText">
         <p>
-          Der 1. Weltkrieg von 1914 bis 1918 setzte der Mitglieder der Burschenschaft Berolina stark zu.
-          Wie viele andere Verbindungen und Vereine zu dieser Zeit, wurden zahlreiche junge Mitglieder als Soldaten an
-          die Front berufen, von woher ein Großteil nie zurück kam.
+          Toleranz ist uns ebenfalls sehr wichtig. Sie ermöglicht es uns, Menschen unabhängig von ihren Überzeugungen, Kulturen
+          oder Lebensstilen mit Respekt zu begegnen.
+          Dies bedeutet, Vielfalt zu schätzen und die individuellen Freiheiten jedes Einzelnen zu respektieren.
+          Sie eröffnet die Tür zu bereichernden Erfahrungen, indem sie den Horizont erweitert und den Dialog fördert.
         </p>
         <p>
-          Gerade Burschenschaften, welche sich durch ihre zahlreichen männlichen und jungen Mitglieder auszeichnen, sind
-          damals stark in ihren Mitgliedern reduziert worden und viele überstanden diese Zeit nicht.
+          Toleranz bedeutet für uns nicht, alles zu akzeptieren, sondern die Fähigkeit, Meinungsverschiedenheiten friedlich zu
+          diskutieren und auch konstruktiv über jede Arten von Themen debattieren zu können.
+          In einer toleranten Gesellschaft können Menschen ihre Einzigartigkeit bewahren, ohne Diskriminierung oder
+          Vorurteile befürchten zu müssen.
+          Somit ist sie der der Schlüssel zu einer harmonischen Welt, in der wir gemeinsam in Frieden und Einheit leben
+          können.
         </p>
       </div>
     </section>
     <hr>
+    <!-- Entwicklung -->
     <section id="entwicklung" class="row mb-3 justify-content-center">
-      <h2 class="mb-3 mt-3 text-center text-md-start">Entwicklung</h2>
-      <div class="col-12 contentText">
-        <p>
-          Die verbliebenen und zurückgekehrten Bundesbrüder setzten all ihre Kraft für einen Neuaufbau ein.
-          Trotz der ungünstigen Verhältnisse nach Kriegsende hatte sich bald wieder eine stattliche Aktivitas
-          zusammengefunden.
-        </p>
-        <p>
-          Gemeinsam wurden wieder vermehrt Veranstaltungen ausgeführt und viele Bundesbrüder fanden den Weg zurück an
-          die Kneiptafel.
-          Dennoch sitzt der Verlust der verlorenen Bundesbrüder tief.
-        </p>
+      <h2 class="mb-4 text-center text-md-start">Entwicklung</h2>
+      <div class="col-10 col-md-4 mb-2 mb-md-0">
+        <img class="b-lazy img-fluid" data-src="Content/img/prinzipien/bildung.webp"
+          src="Content/img/prinzipien/bildung.webp" alt="Bild von Unterricht auf dem Saal">
       </div>
+      <div class="col-12 col-md-8 contentText">
+        <p>
+          Persönliche Entwicklung ist ein kontinuierlicher Prozess, der das Streben nach Wachstum und Selbstverbesserung
+          umfasst. Sie bezieht sich auf die bewusste Anstrengung, die eigene Persönlichkeit, Fähigkeiten und
+          Lebensqualität zu entwickeln. Dies kann intellektuelle, emotionale, spirituelle oder berufliche
+          Weiterentwicklung umfassen.
+        </p>
+        <p>
+          Intellektuelle Entwicklung beinhaltet das Erlernen neuer Fähigkeiten, das Sammeln von Wissen und das
+          Entwickeln kreativer Denkweisen. Emotionale Entwicklung bezieht sich auf das Verständnis und die Kontrolle der
+          eigenen Gefühle sowie die Fähigkeit, empathisch auf andere zu reagieren. Spirituelle Entwicklung umfasst die
+          Suche nach Bedeutung und Sinn im Leben.
+        </p>
+        <p>
+          Persönliche Entwicklung kann auch beruflich sein, indem man Fähigkeiten und Qualifikationen verbessert, um
+          berufliche Ziele zu erreichen. Insgesamt ist persönliche Entwicklung ein lebenslanger Prozess, der zur
+          Selbstverwirklichung und einem erfüllten Leben beiträgt. Es erfordert Selbstreflexion, Zielsetzung und die
+          Bereitschaft, aus Erfahrungen zu lernen.
+        </p>
     </section>
     <hr>
+    <!-- Vaterland -->
     <section id="vaterland" class="row mb-3 justify-content-center">
-      <h2 class="mb-3 mt-3 text-center text-md-start">Vaterland</h2>
-      <div class="col-12 contentText">
+      <h2 class="mb-4 text-center text-md-start">Vaterland</h2>
+      <div class="col-10 col-md-4 mb-2 mb-md-0">
+        <img class="b-lazy img-fluid" data-src="Content/img/prinzipien/vaterland.webp"
+          src="Content/img/prinzipien/vaterland.webp" alt="Luftaufnahme der STadt Lübeck | Copryright: Ulrich Bayer">
+      </div>
+      <div class="col-12 col-md-8 contentText">
         <p>
-          Da die Prinzipien der Burschenschaft Berolina von Freiheit und Demokratie den Idealen des NS-Regimes
-          widersprachen, brachte das Jahr 1936 die Auflösung unserer Korporation.
+          Vaterland steht für uns für das Land und die Heimat, in der man geboren oder aufgewachsen ist. Es trägt eine
+          starke emotionale Bedeutung. Das Vaterland symbolisiert die kulturellen Wurzeln, die Geschichte und die
+          Identität einer Nation.
         </p>
         <p>
-          Damals hieß es sich dem Regime zu beugen und dessen Werte und Ideale weiterzutragen oder in den Untergrund
-          abzutauchen, um nicht verfolgt zu werden.
-          Die Tradition von Decknamen, den sogenannten „Bierspitzen“, fand hier ihren Anfang.
-          Mit diesen fiel es dem Regime schwer, Personen ausfindig zu machen, welche sich regimekritisch äußerten.
+          Es weckt ein Gefühl der Zugehörigkeit und der Verbundenheit mit den Mitbürgern. Das Vaterland kann auch
+          Patriotismus und den Wunsch nach Wohlstand und Sicherheit für das eigene Land symbolisieren. Es ist ein
+          Begriff, der die Liebe und das Engagement für die Heimat reflektiert und in vielen Kulturen als wichtig
+          erachtet wird.
         </p>
       </div>
     </section>
     <hr>
+    <!-- Tradition -->
     <section id="tradition" class="row mb-3 justify-content-center">
-      <h2 class="mb-3 mt-3 text-center text-md-start">Tradition</h2>
-      <div class="col-12 contentText">
+      <h2 class="mb-4 text-center text-md-start">Tradition</h2>
+      <div class="col-10 col-md-4 mb-2 mb-md-0">
+        <img class="b-lazy img-fluid" data-src="Content/img/prinzipien/tradition.webp"
+          src="Content/img/prinzipien/tradition.webp" alt="Bild von einer Burschung">
+      </div>
+      <div class="col-12 col-md-8 contentText">
         <p>
-          Nach Ende des zweiten Weltkrieges wurde unser Vaterland geteilt.
-          Unsere Verbindung durfte nicht mehr in der DDR — wo ihr Gründungsort lag — reaktiviert werden, da auch der nun
-          kommunistischen Regierung das freiheitlich demokratische enken der Studentenverbindungen ein Dorn im Auge war.
+          Traditionen sind kulturelle Praktiken und Rituale, die von Generation zu Generation weitergegeben werden. Sie
+          sind ein wichtiger Bestandteil unserer kulturellen Identität und verbinden uns mit unserer Geschichte.
+          Traditionen können religiöser, sozialer oder familiärer Natur sein und tragen oft zur Stabilität und
+          Kontinuität in Gemeinschaften bei.
         </p>
         <p>
-          Am 19.11.1962 erfolgte daher die Reaktivierung der Burschenschaft in der Hansestadt Lübeck — seit diesem Tag
-          nun als Burschenschaft Berolina Mittweida zu Lübeck bekannt.
+          Traditionen schaffen ein Gefühl der Zusammengehörigkeit und des Erbes. Sie sind eine Möglichkeit, Werte und
+          Überzeugungen zu vermitteln und den sozialen Zusammenhalt zu stärken. Traditionen können auch Freude und
+          Freude in unser Leben bringen, indem sie besondere Anlässe feiern und Gelegenheiten für soziale Interaktionen
+          bieten.
+        </p>
+        <p>
+          Obwohl Traditionen wichtig sind, ist es auch wichtig, sie kritisch zu hinterfragen und anzupassen, um den sich
+          ändernden Bedürfnissen und Werten gerecht zu werden. Auf diese Weise können Traditionen lebendig bleiben und
+          gleichzeitig mit der Zeit Schritt halten. Sie sind ein wichtiger Teil unserer kulturellen Vielfalt und tragen
+          zur Identität und Stabilität in einer sich wandelnden Welt bei.
+
         </p>
       </div>
     </section>
@@ -188,19 +245,23 @@
   <footer>
     <div class="container">
       <div class="row">
+        <!-- Facebook -->
         <div class="col-6 text-end">
           <a class="pe-2" href="https://www.facebook.com/Berolina/" target="_blank" title="Zur Facebook Seite">
-            <svg width="30" height="30" viewBox="0 0 26 26" fill="black" xmlns="http://www.w3.org/2000/svg">
+            <svg class="socialMediaIcon" width="30" height="30" viewBox="0 0 26 26" fill="black"
+              xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M1.45161 0.800781H23.7012C24.4633 0.800781 25.0813 1.418 25.0817 2.1796V24.4208V24.4214C25.0817 25.1834 24.4635 25.8008 23.7012 25.8008H1.45275C0.69067 25.8008 0.0726473 25.1836 0.0722656 24.422V2.18075C0.0722656 1.41895 0.689716 0.801163 1.45161 0.800781ZM17.5751 16.0784V25.7996H13.6798V16.0784H10.4418V12.2733H13.6798V9.47302C13.6798 6.22568 15.6459 4.45818 18.5187 4.45818C19.8946 4.45818 21.077 4.56155 21.4217 4.60777V8.00182H19.4407C17.8777 8.00182 17.5751 8.75075 17.5751 9.84988V12.2733H21.3121L20.8252 16.0784H17.5751Z"
                 fill="#black"></path>
             </svg>
           </a>
         </div>
+        <!-- Instagram -->
         <div class="col-6 text-start">
           <a class="ps-2" href="https://www.instagram.com/burschenschaft_berolina/" target="_blank"
             title="Zur Instagram Seite">
-            <svg width="30" height="30" viewBox="0 0 26 26" fill="black" xmlns="http://www.w3.org/2000/svg">
+            <svg class="socialMediaIcon" width="30" height="30" viewBox="0 0 26 26" fill="black"
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M17.3248 0.800781H7.9463C3.63062 0.800781 0.130859 4.29922 0.130859 8.61328V17.9883C0.130859 22.3023 3.63062 25.8008 7.9463 25.8008H17.3248C21.6405 25.8008 25.1403 22.3023 25.1403 17.9883V8.61328C25.1403 4.29922 21.6405 0.800781 17.3248 0.800781ZM22.7956 17.9883C22.7956 21.0039 20.3416 23.457 17.3248 23.457H7.9463C4.92954 23.457 2.47549 21.0039 2.47549 17.9883V8.61328C2.47549 5.59766 4.92954 3.14453 7.9463 3.14453H17.3248C20.3416 3.14453 22.7956 5.59766 22.7956 8.61328V17.9883Z"
                 fill="#black"></path>
@@ -215,6 +276,7 @@
         </div>
       </div>
       <hr>
+      <!-- Impressum + Datenschutz -->
       <div class="row">
         <div class="col-6 text-end">
           <a href="impressum.html" target="_blank" title="Zum Impressum">Impressum</a>
@@ -235,9 +297,14 @@
     </div>
   </footer>
   <!-- Bootstrap JS -->
-  <script src="Content/lib/bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="Content/lib/bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Fade Up Function -->
+  <script type="text/javascript" src="Content/lib/fadeup.js"></script>
   <!-- Seiten Script -->
   <script type="text/javascript" src="Content/script.js"></script>
+  <!-- Lazy Image Load -->
+  <script type="text/javascript" src="Content/lib/blazy.min.js"></script>
+  <script> var blazy = new Blazy({}); </script>
 </body>
 
 </html>

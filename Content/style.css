@@ -16,6 +16,91 @@
         url("./fonts/Roboto-Bold.woff2") format("woff2");
 }
 
+#dark-mode-toggler {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: 2px solid grey;
+    border-radius: 5px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    left: 30px;
+    top: 21px;
+    z-index: 1002;
+}
+
+#dark-mode-toggler:hover {
+    cursor: pointer;
+}
+
+#dark-mode-toggler img {
+    width: 30px;
+    aspect-ratio: 1/1;
+}
+
+#dark-mode-toggler.dark-mode {
+    background: #000;
+    border-color: black;
+}
+
+.dark-mode {
+    background-color: #000;
+    color: white;
+}
+
+.dark-mode .kontaktKachel {
+    color: black;
+}
+
+.dark-mode a:not(.nav-link):not(.kontaktKachel a):not(.leaflet-control-zoom-in):not(.leaflet-control-zoom-out) {
+    color:white;
+}
+
+.dark-mode hr {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255), rgba(255, 255, 255, 0));
+}
+
+.dark-mode *> .btn-primary {
+    background-color: #393939;
+}
+
+.dark-mode.pfeil {
+    background-image: url(./img/arrow-right-black.png);
+}
+
+.btn-primary:hover .pfeil {
+    background-image: url(./img/arrow-right-white.png);
+}
+
+.fadeup {
+    transform: translateY(50px);
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-duration: 300ms;
+    transition-timing-function: linear;
+}
+
+.in-view {
+    transform: none;
+    opacity: 1;
+}
+
+.b-lazy {
+    -webkit-transition: opacity 300ms ease-in-out;
+    -moz-transition: opacity 300ms ease-in-out;
+    -o-transition: opacity 300ms ease-in-out;
+    transition: opacity 300ms ease-in-out;
+    max-width: 100%;
+    opacity: 0;
+}
+
+.b-lazy.b-loaded {
+    opacity: 1;
+}
+
+
 #greetings {
     width: 100vw;
     height: 100vh;
@@ -25,8 +110,8 @@
 #closeGreetings {
     color: #0d6efd;
     color: #0d6efd;
-  width: fit-content;
-  margin: auto;
+    width: fit-content;
+    margin: auto;
 }
 
 #closeGreetings:hover {
@@ -55,7 +140,17 @@ hr {
     border: 0;
 }
 
-#stammtisch, #seminar, #erfolg, #kneipe, #ausfahrt, #fechten, #freundschaft, #toleranz, #entwicklung, #vaterland, #tradition {
+#stammtisch,
+#seminar,
+#erfolg,
+#kneipe,
+#ausfahrt,
+#fechten,
+#freundschaft,
+#toleranz,
+#entwicklung,
+#vaterland,
+#tradition {
     scroll-margin-top: 9rem;
 }
 
@@ -85,7 +180,7 @@ hr {
 
 .contentLink {
     text-decoration: underline;
-    box-shadow: inset 0 0 0 0 #ffdda5;
+    box-shadow: inset 0 0 0 0 #ffa5a5;
     color: #333333;
     padding: 0 .25rem;
     margin: 0 -.25rem;
@@ -96,7 +191,16 @@ hr {
 .contentLink:active,
 .contentLink:focus {
     color: black !important;
-    box-shadow: inset 300px 0 0 0 #ffdda5;
+    box-shadow: inset 300px 0 0 0 #ffa5a5;
+}
+
+.socialMediaIcon {
+    transition: all 0.3s ease-in-out;
+}
+
+.socialMediaIcon:hover {
+    fill: #e30f0f;
+    scale: 1.2;
 }
 
 /* -- Navigation -- */
@@ -104,7 +208,7 @@ hr {
     background-color: white !important;
     position: sticky;
     top: 0;
-    z-index: 401;
+    z-index: 1001;
 }
 
 .navbar::after {
@@ -122,6 +226,7 @@ hr {
     display: flex !important;
     align-items: center;
     font-size: 22px;
+    color: #595959;
 }
 
 .link {
@@ -230,7 +335,7 @@ hr {
 }
 
 .btn-primary:hover {
-    color: #333333;
+    color: white;
 }
 
 .pfeil {
@@ -242,10 +347,6 @@ hr {
     vertical-align: middle;
     margin-left: 7px;
     align-self: center;
-}
-
-.btn-primary:hover>.pfeil {
-    background-image: url(./img/arrow-right-black.png);
 }
 
 .btn-primary:focus::after,
@@ -261,8 +362,8 @@ hr {
     bottom: 0;
     width: .2rem;
     height: 100%;
-    background: -webkit-gradient(linear, left top, right top, from(#ffdda5), to(#c28d46));
-    background: linear-gradient(90deg, #ffdda5, #c28d46);
+    background: -webkit-gradient(linear, left top, right top, from(#2f2f2f), to(#e30f0f));
+    background: linear-gradient(90deg, #2f2f2f, #e30f0f);
     -webkit-transition: height .4s cubic-bezier(.525, 0, .185, 1);
     transition: width .4s cubic-bezier(.525, 0, .185, 1);
     transition-property: width;
@@ -307,7 +408,7 @@ hr {
     padding: 0;
 }
 
-#accordionSempro table {
+#accordionSempro table, #cookieTable table {
     width: 100%;
 }
 
@@ -324,7 +425,7 @@ hr {
     background-color: #424242;
 }
 
-#accordionSempro th {
+#accordionSempro th, #cookieTable th {
     color: white;
     background-color: #8e8e8e;
     text-align: center;
@@ -333,30 +434,54 @@ hr {
 }
 
 #accordionSempro th:nth-child(2),
-#accordionSempro th:nth-child(3) {
+#accordionSempro th:nth-child(3),
+#cookieTable th:nth-child(2),
+#cookieTable th:nth-child(3) {
     border-left: 1px solid white;
 }
 
-#accordionSempro table td {
+#accordionSempro table td,
+#cookieTable  table td {
     padding: 10px;
 }
 
-#accordionSempro table>tbody>tr>td:nth-of-type(1) {
+#cookieTable {
+    color: black;
+}
+
+#accordionSempro table>tbody>tr>td:nth-of-type(1),
+#cookieTable table>tbody>tr>td:nth-of-type(1) {
     width: 25%;
 }
 
-#accordionSempro table>tbody>tr>td:nth-of-type(2) {
+#accordionSempro table>tbody>tr>td:nth-of-type(2),
+#cookieTable table>tbody>tr>td:nth-of-type(2) {
     width: 25%;
     border-left: 1px solid lightgray;
 }
 
-#accordionSempro table>tbody>tr>td:nth-of-type(3) {
+#accordionSempro table>tbody>tr>td:nth-of-type(3),
+#cookieTable table>tbody>tr>td:nth-of-type(3) {
     width: 50%;
     border-left: 1px solid lightgray;
 }
 
-#accordionSempro tr:nth-child(even) {
+#accordionSempro tr:nth-child(even),
+#cookieTable tr:nth-child(even) {
     background-color: #f4f4f4;
+}
+
+#cookieTable h5 {
+    color: white;
+    background-color: #424242;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+}
+
+#cookieTable table {
+    border: 1px solid lightgray;
 }
 
 /* -- Anmerkungen Sempro -- */
@@ -375,7 +500,7 @@ hr {
 }
 
 .kontaktKachel {
-    background-color: #ececec;
+    background-color: #e1e1e1;
     border-radius: 15px;
 }
 
@@ -384,30 +509,64 @@ footer {
     background-color: lightgray;
     padding-top: 20px;
     margin-top: 50px;
+    color: #333333;
+}
+
+footer hr {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(0, 0, 0), rgba(255, 255, 255, 0)) !important;
 }
 
 footer a {
-    color: black;
+    color: black !important;
 }
 
 footer a:hover {
-    color: black;
+    color: black !important;
 }
 
 @media (max-width: 991px) {
     header {
         padding-inline: 0 !important;
     }
+
     .navbar-nav {
         padding-top: 20px;
     }
+
     .contentImg {
         max-width: 50%;
     }
+
     .contentText {
         text-align: inherit;
     }
-    #stammtisch, #seminar, #erfolg, #kneipe, #ausfahrt, #fechten, #freundschaft, #toleranz, #entwicklung, #vaterland, #tradition {
+
+    #stammtisch,
+    #seminar,
+    #erfolg,
+    #kneipe,
+    #ausfahrt,
+    #fechten,
+    #freundschaft,
+    #toleranz,
+    #entwicklung,
+    #vaterland,
+    #tradition {
         scroll-margin-top: 5rem;
     }
+    #dark-mode-toggler {
+        left: 6%;
+        top: 8px;
+    }
 }
+
+@media (max-width: 575px) {
+    #dark-mode-toggler {
+        left: 2%;
+        top: 8px;
+    }
+}
+
+
+
+

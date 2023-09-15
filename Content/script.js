@@ -1,3 +1,12 @@
+// Zum Start des Webseite: Prüfen ob Begrüßung oder Dark Mode gesetzt wurde
+$(document).ready(() => {
+    console.log("checked");
+    checkForFirstSiteVisitOfDay();
+    checkForDarkModeCookie();
+});
+
+console.log("moin22");
+
 // Animation in Navigation Mobile
 $('#navbar-toggler').on('click', () => {
     if ($('#navbar-toggler').hasClass('menuOpen')) {
@@ -16,28 +25,55 @@ $('#navbar-toggler').on('click', () => {
 
 // Schließt das Fenster um auf die Seite zu kommen
 $('#closeGreetings').click(() => {
+    console.log("geschlossen");
     setDayCookie();
     checkForFirstSiteVisitOfDay();
 });
-// prüft beim Start der Seite, ob die Seite heute schon aufgerufen wurde
-checkForFirstSiteVisitOfDay();
+
+// Funktion des Dark Mode Buttons
+$('#dark-mode-toggler').click(() => {
+    if ($('#dark-mode-toggler').hasClass('dark-mode')) {
+        deleteCookie('darkModeChecked');
+        $('#body-content').removeClass('dark-mode');
+        $('#dark-mode-toggler').removeClass('dark-mode');
+    } else {
+        setDarkModeCookie();
+        $('#body-content').addClass('dark-mode');
+        $('#dark-mode-toggler').addClass('dark-mode');
+    }
+});
 
 // Prüft ob Cookie für Seitenaufruf vorhanden ist
 // Gibt Zirkel Gif wider, wenn nicht
 function checkForFirstSiteVisitOfDay() {
     var dayCookie = getCookie("daylyVisitOnWebsite");
-
+    console.log("checkForDayVisit");
     if (dayCookie == null) {
         $('#greetings').removeClass('d-none');
+        $('#dark-mode-toggler').addClass('d-none');
         $('main').addClass('d-none');
         $('header').addClass('d-none');
         $('nav').addClass('d-none');
     }
     else {
         $('#greetings').addClass('d-none');
+        $('#dark-mode-toggler').removeClass('d-none');
         $('main').removeClass('d-none');
         $('header').removeClass('d-none');
         $('nav').removeClass('d-none');
+    }
+}
+
+function checkForDarkModeCookie() {
+    var darkModeCookie = getCookie('darkModeChecked');
+
+    if (darkModeCookie == null) {
+        $('#body-content').removeClass('dark-mode');
+        $('#dark-mode-toggler').removeClass('dark-mode');
+    }
+    else {
+        $('#body-content').addClass('dark-mode');
+        $('#dark-mode-toggler').addClass('dark-mode');
     }
 }
 
@@ -81,4 +117,17 @@ function setDayCookie() {
     var expireTime = now.setTime(now.getTime() + secondsBetweenDates);
     now.setTime(expireTime);
     document.cookie = 'daylyVisitOnWebsite=ok;expires=' + now.toUTCString();
+}
+
+function setDarkModeCookie() {
+    var now = new Date();
+    // Set Time: 1000 Milisekunden * 60 Sekunden * 60 Minuten * 24 Stunden * 14 Tage
+    now.setTime(now.getTime() + 1000 * 60 * 60 * 24 * 14);
+    document.cookie = 'darkModeChecked=ok;expires=' + now.toUTCString();
+}
+function deleteCookie(name) {
+    if (getCookie(name)) {
+        document.cookie = name + "=" +
+            ";expires=Thu, 01 Jan 1970 00:00:01 GMT";
+    }
 }

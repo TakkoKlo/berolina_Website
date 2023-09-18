@@ -16,8 +16,104 @@
         url("./fonts/Roboto-Bold.woff2") format("woff2");
 }
 
+body {
+    background-image: url(./img/hintergruende/hintergrund_white_d.webp);
+    background-size: cover;
+    color: black;
+    font-family: 'Roboto Regular', sans-serif;
+    overflow-x: hidden;
+}
+
+nav {
+    background-image: url(./img/hintergruende/nav_hintergrund_white.webp);
+}
+
+#timeline ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#timeline ul li {
+    list-style-type: none;
+    position: relative;
+    width: 6px;
+    margin: 0 auto;
+    padding-top: 50px;
+    background: #f0403c;
+    color: white;
+}
+
+#timeline ul li div {
+    position: relative;
+    bottom: 0;
+    width: 500px;
+    padding: 15px;
+    background: #f0403c;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+#timeline ul li div::before {
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+#timeline ul li::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+}
+
+#timeline ul li::after {
+    background: transparent;
+    transition: background .5s ease-in-out;
+}
+
+#timeline ul li:nth-child(2n+1) div {
+    transform: translate3d(200px, 0, 0);
+    left: 45px;
+}
+
+#timeline ul li:nth-child(2n) div {
+    transform: translate3d(-200px, 0, 0);
+    left: -538px;
+}
+
+#timeline ul li.in-view-item::after {
+    background: #f0403c;
+}
+
+#timeline ul li:nth-child(2n+1) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #f0403c transparent transparent;
+}
+
+#timeline ul li:nth-child(2n) div::before {
+    right: -15px;
+    border-width: 8px 0 8px 16px;
+    border-color: transparent transparent transparent #f0403c;
+}
+
+#timeline ul li.in-view-item div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+
 #instagramSection blockquote {
-    min-width: auto!important;
+    min-width: auto !important;
 }
 
 #instagramSection .Header,
@@ -25,13 +121,13 @@
 #instagramSection .Feedback,
 #instagramSection .SocialProof,
 #instagramSection .Footer {
-    display: none!important;
+    display: none !important;
 }
 
 #dark-mode-toggler {
     width: 50px;
     height: 50px;
-    background: white;
+    background: rgba(255, 255, 255, 0.5);
     border: 2px solid grey;
     border-radius: 5px;
     align-items: center;
@@ -54,27 +150,35 @@
 
 #dark-mode-toggler.dark-mode {
     background: #000;
-    border-color: black;
+    border-color: white;
 }
 
 .dark-mode {
-    background-color: #000;
+    color: white;
+    background-image: url(./img/hintergruende/hintergrund_black_d.webp);
+}
+
+.dark-mode nav {
+    background-image: url(./img/hintergruende/nav_hintergrund_black.webp);
+}
+
+.dark-mode #navbar-toggler {
+    background: white;
+}
+
+.dark-mode .nav_social_media svg {
+    fill: white;
+}
+
+.dark-mode a:not(.leaflet-control-zoom-in):not(.leaflet-control-zoom-out):not(.leaflet-control a) {
     color: white;
 }
 
-.dark-mode .kontaktKachel {
-    color: black;
-}
-
-.dark-mode a:not(.nav-link):not(.kontaktKachel a):not(.leaflet-control-zoom-in):not(.leaflet-control-zoom-out) {
-    color:white;
-}
-
-.dark-mode hr {
+/* .dark-mode hr {
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255), rgba(255, 255, 255, 0));
-}
+} */
 
-.dark-mode *> .btn-primary {
+.dark-mode *>.btn-primary {
     background-color: #393939;
 }
 
@@ -132,12 +236,6 @@
     text-decoration: underline;
 }
 
-body {
-    font-family: 'Roboto Regular', sans-serif;
-    overflow-x: hidden;
-    color: #333333;
-}
-
 h1,
 h2,
 h3,
@@ -147,7 +245,7 @@ h5 {
 }
 
 hr {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(0, 0, 0), rgba(255, 255, 255, 0));
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(240, 64, 60), rgba(255, 255, 255, 0));
     height: 1px;
     border: 0;
 }
@@ -177,9 +275,13 @@ hr {
     height: 3px;
     display: block;
     right: 0;
-    background: #fff;
+    background: black;
     transition: width .3s ease;
     -webkit-transition: width .3s ease;
+}
+
+.dark-mode .link::after {
+    background: white;
 }
 
 .link:hover:after,
@@ -187,13 +289,12 @@ hr {
 .link.active:after {
     width: 100%;
     left: 0;
-    background: black;
 }
 
 .contentLink {
     text-decoration: underline;
-    box-shadow: inset 0 0 0 0 #ffa5a5;
-    color: #333333;
+    box-shadow: inset 0 0 0 0 #f0403c;
+    color: black;
     padding: 0 .25rem;
     margin: 0 -.25rem;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
@@ -202,8 +303,8 @@ hr {
 .contentLink:hover,
 .contentLink:active,
 .contentLink:focus {
-    color: black !important;
-    box-shadow: inset 300px 0 0 0 #ffa5a5;
+    color: white;
+    box-shadow: inset 300px 0 0 0 #f0403c;
 }
 
 .socialMediaIcon {
@@ -265,7 +366,8 @@ hr {
 #navbar-toggler {
     width: 50px;
     height: 50px;
-    background: white;
+    background: rgba(255, 255, 255, 0.5);
+    ;
     border: 2px solid grey;
     position: relative;
 }
@@ -344,6 +446,7 @@ hr {
     cursor: pointer;
     -webkit-transition: color .4s cubic-bezier(.525, 0, .185, 1);
     transition: color .4s cubic-bezier(.525, 0, .185, 1);
+    justify-content: center;
 }
 
 .btn-primary:hover {
@@ -374,8 +477,8 @@ hr {
     bottom: 0;
     width: .2rem;
     height: 100%;
-    background: -webkit-gradient(linear, left top, right top, from(#2f2f2f), to(#e30f0f));
-    background: linear-gradient(90deg, #2f2f2f, #e30f0f);
+    background: -webkit-gradient(linear, left top, right top, from(#2f2f2f), to(#e92a27));
+    background: linear-gradient(90deg, #2f2f2f, #e92a27);
     -webkit-transition: height .4s cubic-bezier(.525, 0, .185, 1);
     transition: width .4s cubic-bezier(.525, 0, .185, 1);
     transition-property: width;
@@ -420,7 +523,9 @@ hr {
     padding: 0;
 }
 
-#accordionSempro table, #cookieTable table, #veranstaltungenIndex table {
+#accordionSempro table,
+#cookieTable table,
+#veranstaltungenIndex table {
     width: 100%;
 }
 
@@ -434,10 +539,12 @@ hr {
 
 #accordionSempro .accordion-button:not(.collapsed) {
     color: white;
-    background-color: #424242;
+    background-color: rgb(240, 64, 60);
 }
 
-#accordionSempro th, #cookieTable th, #veranstaltungenIndex th {
+#accordionSempro th,
+#cookieTable th,
+#veranstaltungenIndex th {
     color: white;
     background-color: #8e8e8e;
     text-align: center;
@@ -453,7 +560,7 @@ hr {
 }
 
 #accordionSempro table td,
-#cookieTable  table td,
+#cookieTable table td,
 #veranstaltungenIndex table th,
 #veranstaltungenIndex table td {
     padding: 10px;
@@ -491,7 +598,7 @@ hr {
 #accordionSempro tr:nth-child(even),
 #cookieTable tr:nth-child(even),
 #veranstaltungenIndex tr:nth-child(even) {
-    background-color: #f4f4f4;
+    background-color: rgba(255, 206, 204, 0.7);
 }
 
 #cookieTable h5 {
@@ -503,7 +610,8 @@ hr {
     padding: 15px;
 }
 
-#cookieTable table, #veranstaltungenIndex table {
+#cookieTable table,
+#veranstaltungenIndex table {
     border: 1px solid lightgray;
 }
 
@@ -531,12 +639,13 @@ hr {
 }
 
 .kontaktKachel {
-    background-color: #e1e1e1;
+    background-color: rgba(240, 64, 60, 0.7);
     border-radius: 15px;
 }
 
 /* -- Footer -- */
 footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
     background-color: lightgray;
     padding-top: 20px;
     margin-top: 50px;
@@ -553,6 +662,15 @@ footer a {
 
 footer a:hover {
     color: black !important;
+}
+
+@media(max-width: 1200px) {
+    #timeline ul li:nth-child(2n) div {
+        left: -44vw;
+      }
+      #timeline ul li div {
+        width: calc(40vw - 10px);
+      }
 }
 
 @media (max-width: 991px) {
@@ -585,19 +703,43 @@ footer a:hover {
     #tradition {
         scroll-margin-top: 5rem;
     }
+
     #dark-mode-toggler {
         left: 6%;
         top: 8px;
     }
 }
 
-@media (max-width: 575px) {
-    #dark-mode-toggler {
-        left: 2%;
-        top: 8px;
+@media (max-width: 767px) {
+    body {
+        background-image: url(./img/hintergruende/hintergrund_white_m.webp);
     }
+
+    .dark-mode {
+        background-image: url(./img/hintergruende/hintergrund_black_m.webp);
+    }
+    #timeline ul li {
+        margin-left: 20px;
+    }
+    #timeline ul li:nth-child(2n) div {
+        left: 45px;
+    }
+    #timeline ul li div {
+        width: calc(87vw - 91px);
+    }
+    #timeline ul li:nth-child(2n) div::before {
+        left: -15px;
+        border-width: 8px 16px 8px 0;
+        border-color: transparent #F45B69 transparent transparent;
+      }
 }
 
-
-
-
+@media (max-width: 575px) {
+    #dark-mode-toggler {
+        left: 3%;
+        top: 8px;
+    }
+    #timeline ul li div {
+        width: calc(94vw - 91px);
+      }
+}

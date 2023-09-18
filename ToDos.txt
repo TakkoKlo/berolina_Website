@@ -1,6 +1,7 @@
-Headerbilder auf richtige Größe
-Verhältnis: 1 / 2
-
-Richtiges Bild für
-	Kneipe
-
+- Begrüßung im Dark Mode fixen
+- Richtiges SemPro einbinden
+- Bild für SemPro einbinden
+- Text bei Prinzipien überarbeiten
+- Neueste Fotos auf Startseite
+- Etwas zu Zimmern auf Startseite
+- Weitere Links auf Startseite

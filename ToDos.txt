@@ -5,3 +5,5 @@
 - Neueste Fotos auf Startseite
 - Etwas zu Zimmern auf Startseite
 - Weitere Links auf Startseite
+
+https://takkoklo.github.io/berolina_Website/

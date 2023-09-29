@@ -24,6 +24,10 @@ body {
     overflow-x: hidden;
 }
 
+main {
+    margin-bottom: 50px;
+}
+
 nav {
     background-image: url(./img/hintergruende/nav_hintergrund_white.webp);
 }
@@ -598,7 +602,12 @@ hr {
 #accordionSempro tr:nth-child(even),
 #cookieTable tr:nth-child(even),
 #veranstaltungenIndex tr:nth-child(even) {
-    background-color: rgba(255, 206, 204, 0.7);
+    background-color: rgba(255, 206, 204, 0.2);
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border: none;
 }
 
 #cookieTable h5 {
@@ -648,7 +657,6 @@ footer {
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     background-color: lightgray;
     padding-top: 20px;
-    margin-top: 50px;
     color: #333333;
 }
 

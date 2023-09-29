@@ -308,7 +308,7 @@ hr {
 .contentLink:active,
 .contentLink:focus {
     color: white;
-    box-shadow: inset 300px 0 0 0 #f0403c;
+    box-shadow: inset 400px 0 0 0 #f0403c;
 }
 
 .socialMediaIcon {

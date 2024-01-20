@@ -17,7 +17,8 @@
 }
 
 body {
-    background-image: url(./img/hintergruende/hintergrund_white_d.webp);
+    /* background-image: url(./img/hintergruende/hintergrund_white_d.webp); */
+    background-color: #fff9e9;
     background-size: cover;
     color: black;
     font-family: 'Roboto Regular', sans-serif;
@@ -26,10 +27,6 @@ body {
 
 main {
     margin-bottom: 50px;
-}
-
-nav {
-    background-image: url(./img/hintergruende/nav_hintergrund_white.webp);
 }
 
 #timeline ul {
@@ -129,18 +126,21 @@ nav {
 }
 
 #dark-mode-toggler {
-    width: 50px;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.5);
-    border: 2px solid grey;
+    width: 30px;
+    margin-left: 0.5rem;;
+    height: 30px;
     border-radius: 5px;
     align-items: center;
     display: flex;
     justify-content: center;
-    position: fixed;
-    left: 30px;
-    top: 21px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
     z-index: 1002;
+    background-image: url(./img/moon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
 }
 
 #dark-mode-toggler:hover {
@@ -153,17 +153,18 @@ nav {
 }
 
 #dark-mode-toggler.dark-mode {
-    background: #000;
-    border-color: white;
+    background-image: url(./img/moon-dark.png);
 }
 
-.dark-mode {
+.dark-mode:not(#dark-mode-toggler) {
     color: white;
-    background-image: url(./img/hintergruende/hintergrund_black_d.webp);
+    /* background-image: url(./img/hintergruende/hintergrund_black_d.webp); */
+    background-color: #171717;
 }
 
 .dark-mode nav {
-    background-image: url(./img/hintergruende/nav_hintergrund_black.webp);
+    /* background-image: url(./img/hintergruende/nav_hintergrund_black.webp); */
+    background-color: #171717!important;
 }
 
 .dark-mode #navbar-toggler > .navTogglerLine {
@@ -322,13 +323,13 @@ hr {
 
 /* -- Navigation -- */
 .bg-light {
-    background-color: white !important;
+    background-color: #fff9e9 !important;
     position: sticky;
     top: 0;
     z-index: 1001;
 }
 
-.navbar::after {
+/* .navbar::after {
     background: linear-gradient(to right, #ff2b23 33%, #e5e5e5 33%, #e5e5e5 67%, #000 67%);
     position: absolute;
     content: '';
@@ -336,7 +337,7 @@ hr {
     right: 0;
     left: 0;
     bottom: 0;
-}
+} */
 
 .nav-item:not(#berolina_wappen) {
     font-family: 'Roboto Bold', sans-serif;
@@ -348,6 +349,28 @@ hr {
 
 .link {
     position: relative;
+}
+
+nav {
+    position: relative;
+}
+
+#progress-bar {
+    width: 100%;
+    height: 3px;
+    background: lightgray;
+    bottom: 0;
+    position: absolute;
+}
+
+#progress-line {
+    z-index: 2;
+    width: 0%;
+    height: 3px;
+    /* background: linear-gradient(to right, #ff2b23 33%, #e5e5e5 33%, #e5e5e5 67%, #000 67%); */
+    background: #ff2b23;
+    bottom: 0;
+    position: absolute;
 }
 
 .nav-link {
@@ -658,6 +681,10 @@ footer {
     color: #333333;
 }
 
+footer .container {
+    position: relative;
+}
+
 footer hr {
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(0, 0, 0), rgba(255, 255, 255, 0)) !important;
 }
@@ -709,21 +736,16 @@ footer a:hover {
     #tradition {
         scroll-margin-top: 5rem;
     }
-
-    #dark-mode-toggler {
-        left: 6%;
-        top: 8px;
-    }
 }
 
 @media (max-width: 767px) {
-    body {
+    /* body {
         background-image: url(./img/hintergruende/hintergrund_white_m.webp);
     }
 
     .dark-mode {
         background-image: url(./img/hintergruende/hintergrund_black_m.webp);
-    }
+    } */
     #timeline ul li {
         margin-left: 20px;
     }
@@ -741,10 +763,6 @@ footer a:hover {
 }
 
 @media (max-width: 575px) {
-    #dark-mode-toggler {
-        left: 3%;
-        top: 8px;
-    }
     #timeline ul li div {
         width: calc(94vw - 91px);
       }

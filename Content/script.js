@@ -25,7 +25,14 @@ $('#closeGreetings').click(() => {
     checkForFirstSiteVisitOfDay();
 });
 
-
+// Navtigation Scroll Line
+$(window).scroll(function () {
+    // Progress Line
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    $("#progress-line").css("width", scrolled + '%');
+});
 
 // Erkennen des Dark Modes
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -81,61 +88,61 @@ function setDayCookie() {
 
 
 // Funktion des Dark Mode Buttons
-// $('#dark-mode-toggler').click(() => {
-//     if ($('#dark-mode-toggler').hasClass('dark-mode')) {
-//         deleteCookie('darkModeChecked');
-//         $('#body-content').removeClass('dark-mode');
-//         $('#dark-mode-toggler').removeClass('dark-mode');
-//     } else {
-//         setDarkModeCookie();
-//         $('#body-content').addClass('dark-mode');
-//         $('#dark-mode-toggler').addClass('dark-mode');
-//     }
-// });
+$('#dark-mode-toggler').click(() => {
+    if ($('#dark-mode-toggler').hasClass('dark-mode')) {
+        deleteCookie('darkModeChecked');
+        $('#body-content').removeClass('dark-mode');
+        $('#dark-mode-toggler').removeClass('dark-mode');
+    } else {
+        setDarkModeCookie();
+        $('#body-content').addClass('dark-mode');
+        $('#dark-mode-toggler').addClass('dark-mode');
+    }
+});
 
 
-// function checkForDarkModeCookie() {
-//     var darkModeCookie = getCookie('darkModeChecked');
-//     if (darkModeCookie == null) {
-//         $('#body-content').removeClass('dark-mode');
-//         $('#dark-mode-toggler').removeClass('dark-mode');
-//     }
-//     else {
-//         $('#body-content').addClass('dark-mode');
-//         $('#dark-mode-toggler').addClass('dark-mode');
-//     }
-// }
+function checkForDarkModeCookie() {
+    var darkModeCookie = getCookie('darkModeChecked');
+    if (darkModeCookie == null) {
+        $('#body-content').removeClass('dark-mode');
+        $('#dark-mode-toggler').removeClass('dark-mode');
+    }
+    else {
+        $('#body-content').addClass('dark-mode');
+        $('#dark-mode-toggler').addClass('dark-mode');
+    }
+}
 
 // Prüft, ob ein Cookie mit eingegebenem Namen auf der Seite gesetzt ist
-// function getCookie(name) {
-//     var dc = document.cookie;
-//     var prefix = name + "=";
-//     var begin = dc.indexOf("; " + prefix);
-//     if (begin == -1) {
-//         begin = dc.indexOf(prefix);
-//         if (begin != 0) return null;
-//     }
-//     else {
-//         begin += 2;
-//         var end = document.cookie.indexOf(";", begin);
-//         if (end == -1) {
-//             end = dc.length;
-//         }
-//     }
-//     // because unescape has been deprecated, replaced with decodeURI
-//     //return unescape(dc.substring(begin + prefix.length, end));
-//     return decodeURI(dc.substring(begin + prefix.length, end));
-// }
+function getCookie(name) {
+    var dc = document.cookie;
+    var prefix = name + "=";
+    var begin = dc.indexOf("; " + prefix);
+    if (begin == -1) {
+        begin = dc.indexOf(prefix);
+        if (begin != 0) return null;
+    }
+    else {
+        begin += 2;
+        var end = document.cookie.indexOf(";", begin);
+        if (end == -1) {
+            end = dc.length;
+        }
+    }
+    // because unescape has been deprecated, replaced with decodeURI
+    //return unescape(dc.substring(begin + prefix.length, end));
+    return decodeURI(dc.substring(begin + prefix.length, end));
+}
 
-// function setDarkModeCookie() {
-//     var now = new Date();
-//     // Set Time: 1000 Milisekunden * 60 Sekunden * 60 Minuten * 24 Stunden * 14 Tage
-//     now.setTime(now.getTime() + 1000 * 60 * 60 * 24 * 14);
-//     document.cookie = 'darkModeChecked=ok;expires=' + now.toUTCString();
-// }
-// function deleteCookie(name) {
-//     if (getCookie(name)) {
-//         document.cookie = name + "=" +
-//             ";expires=Thu, 01 Jan 1970 00:00:01 GMT";
-//     }
-// }
+function setDarkModeCookie() {
+    var now = new Date();
+    // Set Time: 1000 Milisekunden * 60 Sekunden * 60 Minuten * 24 Stunden * 14 Tage
+    now.setTime(now.getTime() + 1000 * 60 * 60 * 24 * 14);
+    document.cookie = 'darkModeChecked=ok;expires=' + now.toUTCString();
+}
+function deleteCookie(name) {
+    if (getCookie(name)) {
+        document.cookie = name + "=" +
+            ";expires=Thu, 01 Jan 1970 00:00:01 GMT";
+    }
+}

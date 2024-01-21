@@ -21,7 +21,6 @@ $('#navbar-toggler').on('click', () => {
 
 // Schließt das Fenster um auf die Seite zu kommen
 function closeGreetings() {
-    console.log("Moin");
     setDayCookie();
     checkForFirstSiteVisitOfDay();
 }
@@ -37,6 +36,7 @@ $(window).scroll(function () {
 
 if (getCookie('darkModeChecked') == null) {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        console.log("Dark Mode detected");
         $('#body-content').addClass('dark-mode');
         $('#dark-mode-toggler').addClass('dark-mode');
     }

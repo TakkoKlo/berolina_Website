@@ -591,8 +591,9 @@ nav {
     padding: 10px;
 }
 
-#cookieTable {
+#cookieTable table {
     color: black;
+    background-color: #fbfbfb;
 }
 
 #accordionSempro table>tbody>tr>td:nth-of-type(1),

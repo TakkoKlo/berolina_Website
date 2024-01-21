@@ -20,10 +20,11 @@ $('#navbar-toggler').on('click', () => {
 });
 
 // Schließt das Fenster um auf die Seite zu kommen
-$('#closeGreetings').click(() => {
+function closeGreetings() {
+    console.log("Moin");
     setDayCookie();
     checkForFirstSiteVisitOfDay();
-});
+}
 
 // Navtigation Scroll Line
 $(window).scroll(function () {
@@ -34,15 +35,23 @@ $(window).scroll(function () {
     $("#progress-line").css("width", scrolled + '%');
 });
 
-// Erkennen des Dark Modes
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    $('#body-content').addClass('dark-mode');
-    $('#dark-mode-toggler').addClass('dark-mode');
-}
+if (getCookie('darkModeChecked') == null) {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        checkForDarkModeCookie();
+    }
+    else {
+        checkForDarkModeCookie();
+    }
+} 
 
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-    const newColorScheme = event.matches ? "dark" : "light";
-});
+// if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+//     setDarkModeCookie('yes');
+//     checkForDarkModeCookie();
+// }
+// else {
+//     setDarkModeCookie('no');
+//     checkForDarkModeCookie();
+// }
 
 // Prüft ob Cookie für Seitenaufruf vorhanden ist
 // Gibt Zirkel Gif wider, wenn nicht
@@ -86,30 +95,29 @@ function setDayCookie() {
     document.cookie = 'daylyVisitOnWebsite=ok;expires=' + now.toUTCString();
 }
 
-
 // Funktion des Dark Mode Buttons
 $('#dark-mode-toggler').click(() => {
     if ($('#dark-mode-toggler').hasClass('dark-mode')) {
-        deleteCookie('darkModeChecked');
+        setDarkModeCookie('no');
         $('#body-content').removeClass('dark-mode');
         $('#dark-mode-toggler').removeClass('dark-mode');
     } else {
-        setDarkModeCookie();
+        setDarkModeCookie('yes');
         $('#body-content').addClass('dark-mode');
         $('#dark-mode-toggler').addClass('dark-mode');
     }
 });
 
-
 function checkForDarkModeCookie() {
-    var darkModeCookie = getCookie('darkModeChecked');
-    if (darkModeCookie == null) {
-        $('#body-content').removeClass('dark-mode');
-        $('#dark-mode-toggler').removeClass('dark-mode');
-    }
-    else {
-        $('#body-content').addClass('dark-mode');
-        $('#dark-mode-toggler').addClass('dark-mode');
+    if (getCookie('darkModeChecked') != null) {
+        if (getCookieValue('darkModeChecked') == "yes") {
+            $('#body-content').addClass('dark-mode');
+            $('#dark-mode-toggler').addClass('dark-mode');
+        }
+        else {
+            $('#body-content').removeClass('dark-mode');
+            $('#dark-mode-toggler').removeClass('dark-mode');
+        }
     }
 }
 
@@ -134,15 +142,26 @@ function getCookie(name) {
     return decodeURI(dc.substring(begin + prefix.length, end));
 }
 
-function setDarkModeCookie() {
+function setDarkModeCookie(value) {
     var now = new Date();
     // Set Time: 1000 Milisekunden * 60 Sekunden * 60 Minuten * 24 Stunden * 14 Tage
     now.setTime(now.getTime() + 1000 * 60 * 60 * 24 * 14);
-    document.cookie = 'darkModeChecked=ok;expires=' + now.toUTCString();
+    document.cookie = 'darkModeChecked=' + value + ';expires=' + now.toUTCString();
+    // var cookieValue = $.cookie("darkModeChecked");;
+    console.log(getCookieValue('darkModeChecked'));
 }
+
 function deleteCookie(name) {
     if (getCookie(name)) {
         document.cookie = name + "=" +
             ";expires=Thu, 01 Jan 1970 00:00:01 GMT";
+    }
+}
+
+function getCookieValue(name) {
+    const regex = new RegExp(`(^| )${name}=([^;]+)`)
+    const match = document.cookie.match(regex)
+    if (match) {
+        return match[2]
     }
 }

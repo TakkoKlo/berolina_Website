@@ -37,10 +37,8 @@ $(window).scroll(function () {
 
 if (getCookie('darkModeChecked') == null) {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        checkForDarkModeCookie();
-    }
-    else {
-        checkForDarkModeCookie();
+        $('#body-content').addClass('dark-mode');
+        $('#dark-mode-toggler').addClass('dark-mode');
     }
 } 
 

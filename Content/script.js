@@ -35,6 +35,7 @@ $(window).scroll(function () {
 });
 
 if (getCookie('darkModeChecked') == null) {
+    console.log("Frage nach Dark Mode");
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         console.log("Dark Mode detected");
         $('#body-content').addClass('dark-mode');

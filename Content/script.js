@@ -34,23 +34,14 @@ $(window).scroll(function () {
     $("#progress-line").css("width", scrolled + '%');
 });
 
+// Püft, ob ein Dark ode Cookie gesetzt ist
+// Falls nicht, wird geprüft, ob Dark Mode vom Gerät eingestellt ist oder nicht
 if (getCookie('darkModeChecked') == null) {
-    console.log("Frage nach Dark Mode");
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        console.log("Dark Mode detected");
         $('#body-content').addClass('dark-mode');
         $('#dark-mode-toggler').addClass('dark-mode');
     }
 } 
-
-// if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-//     setDarkModeCookie('yes');
-//     checkForDarkModeCookie();
-// }
-// else {
-//     setDarkModeCookie('no');
-//     checkForDarkModeCookie();
-// }
 
 // Prüft ob Cookie für Seitenaufruf vorhanden ist
 // Gibt Zirkel Gif wider, wenn nicht
@@ -146,8 +137,6 @@ function setDarkModeCookie(value) {
     // Set Time: 1000 Milisekunden * 60 Sekunden * 60 Minuten * 24 Stunden * 14 Tage
     now.setTime(now.getTime() + 1000 * 60 * 60 * 24 * 14);
     document.cookie = 'darkModeChecked=' + value + ';expires=' + now.toUTCString();
-    // var cookieValue = $.cookie("darkModeChecked");;
-    console.log(getCookieValue('darkModeChecked'));
 }
 
 function deleteCookie(name) {

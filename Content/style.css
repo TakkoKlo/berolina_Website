@@ -127,7 +127,8 @@ main {
 
 #dark-mode-toggler {
     width: 30px;
-    margin-left: 0.5rem;;
+    margin-left: 0.5rem;
+    ;
     height: 30px;
     border-radius: 5px;
     align-items: center;
@@ -164,10 +165,10 @@ main {
 
 .dark-mode nav {
     /* background-image: url(./img/hintergruende/nav_hintergrund_black.webp); */
-    background-color: #171717!important;
+    background-color: #171717 !important;
 }
 
-.dark-mode #navbar-toggler > .navTogglerLine {
+.dark-mode #navbar-toggler>.navTogglerLine {
     background-color: white;
 }
 
@@ -472,6 +473,8 @@ nav {
     -webkit-transition: color .4s cubic-bezier(.525, 0, .185, 1);
     transition: color .4s cubic-bezier(.525, 0, .185, 1);
     justify-content: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .btn-primary:hover {
@@ -511,6 +514,8 @@ nav {
     transition-timing-function: cubic-bezier(0.525, 0, 0.185, 1);
     transition-delay: 0s;
     z-index: -1;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 /* -- Carousell -- */
@@ -537,6 +542,15 @@ nav {
     left: -82px !important;
 }
 
+#kontakt-hintergrund {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.2;
+    width: 60%;
+    top: 25%;
+    left: 55%;
+}
+
 /* -- Sempro Tabelle -- */
 .accordion-button>div {
     width: 100%;
@@ -554,6 +568,11 @@ nav {
     width: 100%;
 }
 
+#cookieTable th,
+#cookieTable td {
+    padding-inline: 10px;
+}
+
 #accordionSempro .accordion-button {
     font-size: 70%;
 }
@@ -566,6 +585,12 @@ nav {
     color: white;
     background-color: rgb(240, 64, 60);
 }
+
+.veranstaltung {
+    background: #fff9e9;
+}
+
+/*
 
 #accordionSempro th,
 #cookieTable th,
@@ -589,14 +614,14 @@ nav {
 #veranstaltungenIndex table th,
 #veranstaltungenIndex table td {
     padding: 10px;
-}
+} */
 
 #cookieTable table {
     color: black;
     background-color: #fbfbfb;
 }
 
-#accordionSempro table>tbody>tr>td:nth-of-type(1),
+/* #accordionSempro table>tbody>tr>td:nth-of-type(1),
 #cookieTable table>tbody>tr>td:nth-of-type(1) {
     width: 25%;
 }
@@ -611,20 +636,12 @@ nav {
 #cookieTable table>tbody>tr>td:nth-of-type(3) {
     width: 50%;
     border-left: 1px solid lightgray;
-}
-
-#veranstaltungenIndex th:nth-child(2) {
-    border-left: 1px solid lightgray;
-}
-
-#veranstaltungenIndex td:nth-child(even) {
-    border-left: 1px solid lightgray;
-}
+} */
 
 #accordionSempro tr:nth-child(even),
 #cookieTable tr:nth-child(even),
 #veranstaltungenIndex tr:nth-child(even) {
-    background-color: rgba(255, 206, 204, 0.2);
+    background-color: #fbf8f1;
 }
 
 .accordion-button:focus {
@@ -641,8 +658,7 @@ nav {
     padding: 15px;
 }
 
-#cookieTable table,
-#veranstaltungenIndex table {
+#cookieTable table {
     border: 1px solid lightgray;
 }
 
@@ -663,6 +679,76 @@ nav {
     width: 10%;
 }
 
+#accordionSempro table, #ueberUns-veranstaltungen {
+    border: 2px solid rgb(240, 64, 60);
+}
+
+.nameUndInfo {
+    display: flex;
+}
+
+.veranstaltung {
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .0);
+}
+
+.veranstaltung .bild {
+    width: 80px;
+}
+
+.veranstaltung .bild>img {
+    width: 50px;
+    height: 100%;
+}
+
+.veranstaltung>td:not(.bild) {
+    padding-inline: 10px;
+}
+
+.veranstaltung td {
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.veranstaltung .notiz {
+    font-weight: normal;
+}
+
+.veranstaltung .datum {
+    text-align: center;
+    font-size: 1.3rem;
+    white-space: nowrap;
+    width: 10%;
+}
+
+.veranstaltung .wochentag {
+    text-align: center;
+    width: 7%;
+}
+
+.veranstaltung .tag {
+    color: #595959;
+    white-space: nowrap;
+}
+
+.veranstaltung .zeit {
+    white-space: nowrap;
+    width: 12%;
+}
+
+.veranstaltung .uhrzeit,
+.veranstaltung .name {
+    font-size: 1.1rem;
+    padding-right: 10px;
+}
+
+.zeit.transparent {
+    color: transparent !important;
+    pointer-events: none !important;
+    user-select: none !important;
+}
+
 /* -- Kontaktseite -- */
 .kontaktImg {
     border-radius: 100%;
@@ -670,7 +756,7 @@ nav {
 }
 
 .kontaktKachel {
-    background-color: rgba(240, 64, 60, 0.7);
+    background-color: rgba(240, 64, 60, 0.8);
     border-radius: 15px;
 }
 
@@ -701,13 +787,34 @@ footer a:hover {
 @media(max-width: 1200px) {
     #timeline ul li:nth-child(2n) div {
         left: -44vw;
-      }
-      #timeline ul li div {
+    }
+
+    #timeline ul li div {
         width: calc(40vw - 10px);
-      }
+    }
+}
+
+@media (min-width: 769px) {
+    .veranstaltung:hover {
+        transform: scale(1.01, 1.1);
+        background: white;
+        box-shadow: 0 .5rem 1rem rgba(240, 64, 60, .3);
+        z-index: 2;
+    }
+    .veranstaltung .anmerkung {
+        text-align: right;
+    }
 }
 
 @media (max-width: 991px) {
+    #accordionSempro table,
+    #ueberUns-veranstaltungen,
+    #cookieTable table {
+        overflow-x: auto;
+        white-space: nowrap;
+        display: block;
+    }
+
     header {
         padding-inline: 0 !important;
     }
@@ -737,34 +844,95 @@ footer a:hover {
     #tradition {
         scroll-margin-top: 5rem;
     }
+
+    #kontakt-hintergrund {
+        width: 90%;
+        top: 50%;
+    }
+
+    .veranstaltung .bild {
+        min-width: 60px;
+        max-width: 60px;
+    }
+
+    .veranstaltung .datum {
+        min-width: 125px;
+    }
+
+    .veranstaltung .wochentag {
+        min-width: 80px;
+        max-width: 80px;
+    }
 }
 
 @media (max-width: 767px) {
-    /* body {
-        background-image: url(./img/hintergruende/hintergrund_white_m.webp);
-    }
-
-    .dark-mode {
-        background-image: url(./img/hintergruende/hintergrund_black_m.webp);
-    } */
     #timeline ul li {
         margin-left: 20px;
     }
+
     #timeline ul li:nth-child(2n) div {
         left: 45px;
     }
+
     #timeline ul li div {
         width: calc(87vw - 91px);
     }
+
     #timeline ul li:nth-child(2n) div::before {
         left: -15px;
         border-width: 8px 16px 8px 0;
         border-color: transparent #F45B69 transparent transparent;
-      }
+    }
+
+    .veranstaltung>td:not(.bild) {
+        padding-inline: 5px;
+    }
+
+    .veranstaltung .zeit {
+        display: flex;
+        flex-direction: column;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .veranstaltung .bild>img {
+        width: 48px;
+    }
+
+    .veranstaltung .datum {
+        font-size: 1rem;
+        min-width: 80px;
+        max-width: 80px;
+    }
+
+    .veranstaltung .uhrzeit,
+    .veranstaltung .name {
+        font-size: 0.9rem;
+    }
+
+    .veranstaltung .uhrzeit {
+        padding-right: 5px;
+    }
+
+    .veranstaltung .notiz,
+    .veranstaltung .wochentag {
+        font-size: 0.8rem;
+    }
+
+    .veranstaltung .wochentag {
+        min-width: 70px;
+        max-width: 70px;
+    }
 }
 
 @media (max-width: 575px) {
     #timeline ul li div {
         width: calc(94vw - 91px);
-      }
+    }
+
+    #kontakt-hintergrund {
+        width: 120%;
+        left: 30%;
+    }
 }
+

@@ -174,27 +174,8 @@
     <section id="veranstaltungenIndex" class="row mb-5 justify-content-center">
       <h2 class="mb-3 mt-3 text-center text-md-start">Wichtige Veranstaltungen des Semesters</h2>
       <div class="col-12">
-        <table>
-          <tr>
-            <th class="text-start w-50">Veranstaltung</th>
-            <th class="text-start">Datum & Uhrzeit</th>
-          </tr>
-          <tr>
-            <td>Antrittskneipe</td>
-            <td>21.10.2023 | 20:00 Uhr</td>
-          </tr>
-          <tr>
-            <td>Festkommers</td>
-            <td>11.11.2023 | 20:00 Uhr</td>
-          </tr>
-          <tr>
-            <td>Feuerzangenbowle</td>
-            <td>02.12.2023 | 19:00 Uhr</td>
-          </tr>
-          <tr>
-            <td>Exkneipe</td>
-            <td>10.02.2024 | 20:00 Uhr</td>
-          </tr>
+        <table id="ueberUns-veranstaltungen">
+
         </table>
       </div>
       <a class="btn-primary mt-4" href="semester.html" title="Zum Semesterprogramm der Berolina">
@@ -404,6 +385,96 @@
   <script type="text/javascript" src="Content/lib/fadeup.js"></script>
   <!-- Seiten Script -->
   <script type="text/javascript" src="Content/script.js"></script>
+  <script>
+    // SOMMER SEMESTER
+    var veranstaltungen = {
+            1: {
+                bild: "kneipe",
+                name: "Antrittskneipe",
+                datum: "06.",
+                tag: "Sa",
+                monat: "Apr",
+                uhrzeit: "20:00",
+                tempus: "hst",
+                anmerkung: "A"
+            },
+            2: {
+                bild: "orgelfelsenhaus",
+                name: "Orgelfelsenhaus Fahrt",
+                datum: "09. – 12.",
+                tag: "Do – So",
+                monat: "Mai",
+                uhrzeit: "",
+                tempus: "",
+                anmerkung: "A, D"
+            },
+            3: {
+                bild: "weinabend",
+                name: "Weinabend",
+                datum: "29.",
+                tag: "Sa",
+                monat: "Jun",
+                uhrzeit: "19:00",
+                tempus: "hst",
+                anmerkung: "A, D"
+            },
+            4: {
+                bild: "sommerbowle",
+                name: "Sommerbowle",
+                datum: "13.",
+                tag: "Sa",
+                monat: "Jul",
+                uhrzeit: "17:00",
+                tempus: "hct",
+                anmerkung: "A, D"
+            },
+            5: {
+                bild: "kneipe",
+                name: "Exkneipe",
+                datum: "27.",
+                tag: "Sa",
+                monat: "Jul",
+                uhrzeit: "20:00",
+                tempus: "hst",
+                anmerkung: "A"
+            },
+            6: {
+                bild: "kanutour",
+                name: "Kanutour",
+                datum: "31.",
+                tag: "Sa",
+                monat: "Aug",
+                uhrzeit: "11:00",
+                tempus: "hst",
+                anmerkung: "A, D"
+            }
+        }
+
+        $(document).ready(function () {
+            var baustein = '<tr class="veranstaltung"><td class="bild"><img src=""></td><td class="datum"></td><td class="wochentag"><div class="tag"></div><div class="monat"></div></td><td class="zeit"><span class="uhrzeit"></span><span class="notiz tempus"></span></td><td class="d-none d-md-table-cell"><div class="d-flex justify-content-between"><span class="name"></span><span class="notiz anmerkung"></span></td></div><td class="d-md-none"><div class="name"></div><div class="notiz anmerkung"></div></td></tr>'
+
+            $.each(veranstaltungen, function (value, veranstaltung) {
+              console.log(this);
+                let tempBaustein = $(baustein).clone();
+                $(tempBaustein).find('.bild').children('img').attr('src', "Content/img/semester/" + this.bild + ".webp");
+                $(tempBaustein).find('.datum').html(this.datum);
+                $(tempBaustein).find('.tag').html(this.tag);
+                $(tempBaustein).find('.monat').html(this.monat);
+                if (this.uhrzeit == "") {
+                    $(tempBaustein).find('.uhrzeit').html("00:00 Uhr");
+                    $(tempBaustein).find('.tempus').html("(hst)");
+                    $(tempBaustein).find('.zeit').addClass('transparent');
+                }
+                else {
+                    $(tempBaustein).find('.uhrzeit').html(this.uhrzeit + " Uhr");
+                    $(tempBaustein).find('.tempus').html("(" + this.tempus + ")");
+                }
+                $(tempBaustein).find('.name').html(this.name);
+                $(tempBaustein).find('.anmerkung').html("(" + this.anmerkung + ")");
+                $('#ueberUns-veranstaltungen').append(tempBaustein);
+            });
+        });
+  </script>
 </body>
 
 </html>

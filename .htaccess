@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule (.*) https://%{HTTP_HOST}/$1 [R=301,L]
+RewriteRule ^([^/.]+)$ $1.html [NC,L]
+RewriteRule (.*)index\.html https://berolina-mittweida.de/$1 [NC,R=301]

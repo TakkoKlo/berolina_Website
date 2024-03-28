@@ -7,12 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="Description"
-    content="Du suchst eine Studentenverbindung in L&uuml;beck ? Dann komme uns auf dem Koprporationshaus L&uuml;beck besuchen." />
+    content="Du suchst eine Studentenverbindung in L&uuml;beck? Dann komme uns gern auf dem Koprporationshaus L&uuml;beck besuchen und lerne uns kennen." />
   <meta name="Keywords"
     content="Studentenverbindung, Burschenschaft, Verbindung, L&uuml;beck, Hansestadt, Studentenwohnheim, Berolina Mittweida, WG, Wohnung" />
   <title>Studentenverbindung - Burschenschaft Berolina Mittweida zu Lübeck</title>
   <!-- Favicon -->
-  <link rel="shortcut icon" href="Content/img/favicon.ico">
+  <link rel="shortcut icon" href="./Content/img/favicon.ico">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="Content/lib/bootstrap-5.3.1-dist/css/bootstrap.min.css">
   <!-- Seiten CSS -->
@@ -32,28 +32,28 @@
         <span id="navTogglerLine2" class="navTogglerLine"></span>
         <span id="navTogglerLine3" class="navTogglerLine"></span>
       </button>
-      <a href="index.html" title="Zur Startseite">
+      <a href="index" title="Zur Startseite">
         <img id="berolina_wappen_mobile" class="d-lg-none position-absolute" src="Content/img/wappen.webp"
           alt="Wappen der Berolina Mittweida zu Lübeck">
       </a>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav nav-justified w-100">
           <li class="nav-item">
-            <a id="uerberUns_Link" class="nav-link link" href="ueberuns.html" title="Zur „Über Uns“-Seite">Über Uns</a>
+            <a id="uerberUns_Link" class="nav-link link" href="ueber-uns" title="Zur „Über Uns“-Seite">Über Uns</a>
           </li>
           <li class="nav-item">
-            <a id="zimmer_Link" class="nav-link link" href="zimmer.html" title="Zu den Zimmern">Zimmer frei!</a>
+            <a id="zimmer_Link" class="nav-link link" href="zimmer" title="Zu den Zimmern">Zimmer frei!</a>
           </li>
           <li id="berolina_wappen" class="nav-item d-none d-lg-block">
-            <a class="nav-link" href="index.html" title="Zur Startseite">
+            <a class="nav-link" href="index" title="Zur Startseite">
               <img class="img-fluid" src="Content/img/wappen.webp" alt="Wappen der Berolina Mittweida zu Lübeck" />
             </a>
           </li>
           <li class="nav-item">
-            <a id="semester_Link" class="nav-link link" href="semester.html" title="Zur Semesterübersicht">Semester</a>
+            <a id="semester_Link" class="nav-link link" href="semester" title="Zur Semesterübersicht">Semester</a>
           </li>
           <li class="nav-item">
-            <a id="kontakt_Link" class="nav-link link" href="kontakt.html" title="Zur Kontaktübersicht">Kontakt</a>
+            <a id="kontakt_Link" class="nav-link link" href="kontakt" title="Zur Kontaktübersicht">Kontakt</a>
           </li>
         </ul>
         <hr>
@@ -112,7 +112,7 @@
           stark“.
           Dies ist wörtlich zu nehmen, denn unsere Mitglieder setzen sich aus vielen Interessens- und Berufsgebieten
           zusammen.
-          Ob Mediziner, Maschinenbau- oder Ekeltro–Ingenieur, Architekten, Programmierer oder auch Chemiker – wann immer
+          Ob Mediziner, Maschinenbau- oder Elektro–Ingenieur, Architekten, Programmierer oder auch Chemiker – wann immer
           du Fragen zu bestimmten Themen hast,
           wird dir Rat gegeben.
           Auch wenn die Interessen einiger Bundesbrüder weit auseinander zu gehen scheinen, so haben wir eins gemein:
@@ -134,7 +134,7 @@
           uns melden.
         </p>
       </div>
-      <a class="btn-primary mt-4" href="ueberuns.html" title="Zur Über-Uns-Seite">
+      <a class="btn-primary mt-4" href="ueber-uns" title="Zur Über-Uns-Seite">
         Über Uns<div class="pfeil"></div>
       </a>
     </section>
@@ -165,7 +165,7 @@
           Wenn auch du Interesse an einem Zimmer hast, kannst du uns gern kontaktieren!
         </p>
       </div>
-      <a class="btn-primary mt-4" href="zimmer.html" title="Zur Zimmer Übersicht">
+      <a class="btn-primary mt-4" href="zimmer" title="Zur Zimmer Übersicht">
         Zu den Zimmern<div class="pfeil"></div>
       </a>
     </section>
@@ -178,7 +178,7 @@
 
         </table>
       </div>
-      <a class="btn-primary mt-4" href="semester.html" title="Zum Semesterprogramm der Berolina">
+      <a class="btn-primary mt-4" href="semester" title="Zum Semesterprogramm der Berolina">
         Zum Semester<div class="pfeil"></div>
       </a>
     </section>
@@ -359,10 +359,10 @@
       <!-- Impressum + Datenschutz -->
       <div class="row">
         <div class="col-6 text-end">
-          <a href="impressum.html" target="_blank" title="Zum Impressum">Impressum</a>
+          <a href="impressum" target="_blank" title="Zum Impressum">Impressum</a>
         </div>
         <div class="col-6 text-start">
-          <a href="datenschutz.html" target="_blank" title="Zum Datenschutz">Datenschutz</a>
+          <a href="datenschutz" target="_blank" title="Zum Datenschutz">Datenschutz</a>
         </div>
         <span class="position-absolute" style="left: 50%;padding:0;width: max-content;">|</span>
       </div>
@@ -388,92 +388,101 @@
   <script>
     // SOMMER SEMESTER
     var veranstaltungen = {
-            1: {
-                bild: "kneipe",
-                name: "Antrittskneipe",
-                datum: "06.",
-                tag: "Sa",
-                monat: "Apr",
-                uhrzeit: "20:00",
-                tempus: "hst",
-                anmerkung: "A"
-            },
-            2: {
-                bild: "orgelfelsenhaus",
-                name: "Orgelfelsenhaus Fahrt",
-                datum: "09. – 12.",
-                tag: "Do – So",
-                monat: "Mai",
-                uhrzeit: "",
-                tempus: "",
-                anmerkung: "A, D"
-            },
-            3: {
-                bild: "weinabend",
-                name: "Weinabend",
-                datum: "29.",
-                tag: "Sa",
-                monat: "Jun",
-                uhrzeit: "19:00",
-                tempus: "hst",
-                anmerkung: "A, D"
-            },
-            4: {
-                bild: "sommerbowle",
-                name: "Sommerbowle",
-                datum: "13.",
-                tag: "Sa",
-                monat: "Jul",
-                uhrzeit: "17:00",
-                tempus: "hct",
-                anmerkung: "A, D"
-            },
-            5: {
-                bild: "kneipe",
-                name: "Exkneipe",
-                datum: "27.",
-                tag: "Sa",
-                monat: "Jul",
-                uhrzeit: "20:00",
-                tempus: "hst",
-                anmerkung: "A"
-            },
-            6: {
-                bild: "kanutour",
-                name: "Kanutour",
-                datum: "31.",
-                tag: "Sa",
-                monat: "Aug",
-                uhrzeit: "11:00",
-                tempus: "hst",
-                anmerkung: "A, D"
-            }
+      1: {
+        bild: "kneipe",
+        name: "Antrittskneipe",
+        datum: "27.",
+        tag: "Sa",
+        monat: "Apr",
+        uhrzeit: "20:00",
+        tempus: "hst",
+        anmerkung: "A"
+      },
+      2: {
+        bild: "orgelfelsenhaus",
+        name: "Orgelfelsenhaus Fahrt",
+        datum: "09. – 12.",
+        tag: "Do – So",
+        monat: "Mai",
+        uhrzeit: "",
+        tempus: "",
+        anmerkung: "A, D"
+      },
+      3: {
+        bild: "weinabend",
+        name: "Weinabend",
+        datum: "29.",
+        tag: "Sa",
+        monat: "Jun",
+        uhrzeit: "19:00",
+        tempus: "hst",
+        anmerkung: "A, D"
+      },
+      4: {
+        bild: "pythagoras",
+        name: "Sommertreffen des Pythagoras",
+        datum: "30.",
+        tag: "So",
+        monat: "Jun",
+        uhrzeit: "11:00",
+        tempus: "hst",
+        anmerkung: "A, D"
+      },
+      5: {
+        bild: "sommerbowle",
+        name: "Sommerbowle",
+        datum: "13.",
+        tag: "Sa",
+        monat: "Jul",
+        uhrzeit: "17:00",
+        tempus: "hct",
+        anmerkung: "A, D"
+      },
+      6: {
+        bild: "kneipe",
+        name: "Exkneipe",
+        datum: "27.",
+        tag: "Sa",
+        monat: "Jul",
+        uhrzeit: "20:00",
+        tempus: "hst",
+        anmerkung: "A"
+      },
+      7: {
+        bild: "kanutour",
+        name: "Kanutour",
+        datum: "31.",
+        tag: "Sa",
+        monat: "Aug",
+        uhrzeit: "11:00",
+        tempus: "hst",
+        anmerkung: "A, D"
+      }
+    }
+
+    $(document).ready(function () {
+      var baustein = '<tr class="veranstaltung"><td class="bild d-none d-md-table-cell"><img src=""></td><td class="datum"></td><td class="wochentag"><div class="tag"></div><div class="monat"></div></td><td class="d-none d-md-table-cell zeit"><span class="uhrzeit"></span><span class="notiz tempus"></span></td><td class="d-none d-md-table-cell"><div class="d-flex justify-content-between"><span class="name"></span><span class="notiz anmerkung"></span></div></td><td class="d-md-none"><div class="name"></div><div class="notiz anmerkung"></div></td><td class="d-md-none zeit"><span class="uhrzeit"></span><span class="notiz tempus"></span></td></tr>'
+      
+      $.each(veranstaltungen, function (value, veranstaltung) {
+        let tempBaustein = $(baustein).clone();
+        $(tempBaustein).find('.bild').children('img').attr('src', "Content/img/semester/" + this.bild + ".webp");
+        $(tempBaustein).find('.datum').html(this.datum);
+        $(tempBaustein).find('.tag').html(this.tag);
+        $(tempBaustein).find('.monat').html(this.monat);
+        if (this.uhrzeit == "") {
+          $(tempBaustein).find('.uhrzeit').html("00:00 Uhr");
+          $(tempBaustein).find('.tempus').html("(hst)");
+          $(tempBaustein).find('.zeit').addClass('transparent');
         }
-
-        $(document).ready(function () {
-            var baustein = '<tr class="veranstaltung"><td class="bild"><img src=""></td><td class="datum"></td><td class="wochentag"><div class="tag"></div><div class="monat"></div></td><td class="zeit"><span class="uhrzeit"></span><span class="notiz tempus"></span></td><td class="d-none d-md-table-cell"><div class="d-flex justify-content-between"><span class="name"></span><span class="notiz anmerkung"></span></td></div><td class="d-md-none"><div class="name"></div><div class="notiz anmerkung"></div></td></tr>'
-
-            $.each(veranstaltungen, function (value, veranstaltung) {
-              console.log(this);
-                let tempBaustein = $(baustein).clone();
-                $(tempBaustein).find('.bild').children('img').attr('src', "Content/img/semester/" + this.bild + ".webp");
-                $(tempBaustein).find('.datum').html(this.datum);
-                $(tempBaustein).find('.tag').html(this.tag);
-                $(tempBaustein).find('.monat').html(this.monat);
-                if (this.uhrzeit == "") {
-                    $(tempBaustein).find('.uhrzeit').html("00:00 Uhr");
-                    $(tempBaustein).find('.tempus').html("(hst)");
-                    $(tempBaustein).find('.zeit').addClass('transparent');
-                }
-                else {
-                    $(tempBaustein).find('.uhrzeit').html(this.uhrzeit + " Uhr");
-                    $(tempBaustein).find('.tempus').html("(" + this.tempus + ")");
-                }
-                $(tempBaustein).find('.name').html(this.name);
-                $(tempBaustein).find('.anmerkung').html("(" + this.anmerkung + ")");
-                $('#ueberUns-veranstaltungen').append(tempBaustein);
-            });
-        });
+        else {
+          $(tempBaustein).find('.uhrzeit').html(this.uhrzeit + " Uhr");
+          $(tempBaustein).find('.tempus').html("(" + this.tempus + ")");
+        }
+        $(tempBaustein).find('.name').html(this.name);
+        $(tempBaustein).find('.anmerkung').html("(" + this.anmerkung + ")");
+        $('#ueberUns-veranstaltungen').append(tempBaustein);
+      });
+    });
   </script>
 </body>
 

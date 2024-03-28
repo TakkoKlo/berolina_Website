@@ -1,1 +1,8 @@
 https://takkoklo.github.io/berolina_Website/
+
+Seiten entfernen:
+sempro.html
+gesch.html
+haus.html
+contact.html
+prinz.html
